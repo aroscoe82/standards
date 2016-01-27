@@ -2,114 +2,163 @@
 <html>
 <head>
   <title>Standards</title>
+  <link rel="stylesheet" type="text/css" href="css/guide_styles.css">
 </head>
-<body>
-<ul>
-  <li>Avoid Camelcase</li>
-  <li>Write things semantically. Name it's function not its appearance.</li>
-  <li>Avoid presentation -or- location specific names</li>
-  <li>Avoid naming based on content</li>
-  <li>Name single noun</li>
-  <li>Name modifiers and state-based with adjectives</li>
-  <li>Consider name spacing everything</li>
-  <li>Do not nest more than 3 levels deep</li>
-  <li>Don't use IDs, IDs are reserved for JS</li>
-  <li>BEM (Block, Element, Modifier)
-    <ul>
-        <li>.accordion-item-selected</li>
-        <li>.nav_bar-link-clicked</li>
-    </ul>
-  </li>
-</ul>
-
-<ul>
-    <li>Where possible limit files with to 80 characters<br>
-    <p>How to set sublime to 80 characters: "rulers": [80]</li>
-    <li>Soft tabs with 2 space indent</li>
-    <li>One space after :</li>
-    <li>Put space before {</li>
-    <li>Blank line between slector block</li>
-    <li>Multiple slectors shoud lbe on invididual line with no space after comma</li>
-    <li>Property value pairs indent one level</li>
-    <li>single quote urs and string values</li>
-    <li>Sorting (alphabetical order)
-      <ul>
-        <li>variables</li>
-        <li>extend directives</li>
-        <li>include directives</li>
-        <li>properties</li>
-      </ul>
-    </li>
-</ul>
-
-<ul>
-    <li>Rem units with px fallback<br>
-    <p>@mixin font-size($sizevalue: 1.6){<br>
-    &nbsp;&nbsp;font-size: ($sizevalue * 10) + px;<br>
-    &nbsp;&nbsp;font-size: ($sizevalue + rem;<br>
-    }</li>
-    <li>Set HTML to 10px to ensure 1rem = 1px</li>
-    <li>Use em for positioning</li>
-</ul>
-
-<sidebar>
-  <ul>
-      <li>Colors
-        <ul>
-          <li>Pallets</li>
-          <li>Text Accessibility</li>
-        </ul>
-      </li>
-      <li>Typography
-        <ul>
-          <li>Typefaces</li>
-          <li>Type Setting</li>
-          <li>Links</li>
-          <li>Lists</li>
-          <li>Alignment</li>
-        </ul>
-      </li>
-      <li>Grid System</li>
-      <li>Buttons
-        <ul>
+<body data-spy="scroll" data-target="#nav">
+  <div class="sidebar">
+    <nav id="nav">
+      <ul class="nav">
+        <li>
+          <a href="#getting-started">Getting Started</a>
+          <ul>
+            <li><a href="#getting-started-developers">Developers</a></li>
+            <li><a href="#getting-started-designers">Designers</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#colors">Colors</a>
+          <ul>
+            <li>Pallets</li>
+            <li>Text Accessibility</li>
+          </ul>
+        </li>
+        <li>Typography
+          <ul>
+            <li>Typefaces</li>
+            <li>Type Setting</li>
+            <li>Links</li>
+            <li>Lists</li>
+            <li>Alignment</li>
+          </ul>
+        </li>
+        <li>Grid System</li>
+        <li>Buttons
+          <ul>
             <li>Sizes</li>
             <li>Active States</li>
             <li>Hover States</li>
             <li>Disable States</li>
             <li>Options</li>
-        </ul>
-      </li>
-      <li>Images
-        <ul>
+          </ul>
+        </li>
+        <li>Images
+          <ul>
             <li>Sizing</li>
             <li>Alignment</li>
             <li>Thumbnails</li>
-        </ul>
-      </li>
-      <li>Forms
-        <ul>
-          <li>Text Inputs and area</li>
-          <li>Dropdown</li>
-          <li>Checkboxes</li>
-          <li>Radio Buttons</li>
-          <li>Date Input</li>
-        </ul>
-      </li>
-      <li>Form Types
-        <ul>
+          </ul>
+        </li>
+        <li>Forms
+          <ul>
+            <li>Text Inputs and area</li>
+            <li>Dropdown</li>
+            <li>Checkboxes</li>
+            <li>Radio Buttons</li>
+            <li>Date Input</li>
+          </ul>
+        </li>
+        <li>Form Types
+          <ul>
             <li>Password Reset</li>
             <li>Login</li>
+          </ul>
+        </li>
+        <li>Alerts</li>
+        <li>Side Navigation</li>
+        <li>Navigation</li>
+        <li>Breadcrumbs</li>
+        <li>Panels/Wells</li>
+        <li>Video</li>
+        <li>Icons</li>
+        <li>Widgets</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-content" data-spy="scroll" data-target="#nav" data-offset="10">
+    <div id="getting-started">
+      <h1>Getting Started</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div id="getting-started-developers">
+      <h3>Developers</h3>
+      <ul>
+        <li>Avoid Camelcase</li>
+        <li>Write things semantically. Name it's function not its appearance.</li>
+        <li>Avoid presentation -or- location specific names</li>
+        <li>Avoid naming based on content</li>
+        <li>Name single noun</li>
+        <li>Name modifiers and state-based with adjectives</li>
+        <li>Consider name spacing everything</li>
+        <li>Do not nest more than 3 levels deep</li>
+        <li>Don't use IDs, IDs are reserved for JS</li>
+        <li>BEM (Block, Element, Modifier)
+          <ul>
+            <li>.accordion-item-selected</li>
+            <li>.nav_bar-link-clicked</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <ul>
+      <li>Where possible limit files with to 80 characters<br>
+        <p>How to set sublime to 80 characters: "rulers": [80]</p>
+      </li>
+      <li>Soft tabs with 2 space indent</li>
+      <li>One space after :</li>
+      <li>Put space before {</li>
+      <li>Blank line between slector block</li>
+      <li>Multiple slectors shoud lbe on invididual line with no space after comma</li>
+      <li>Property value pairs indent one level</li>
+      <li>single quote urs and string values</li>
+      <li>Sorting (alphabetical order)
+        <ul>
+          <li>variables</li>
+          <li>extend directives</li>
+          <li>include directives</li>
+          <li>properties</li>
         </ul>
       </li>
-      <li>Alerts</li>
-      <li>Side Navigation</li>
-      <li>Navigation</li>
-      <li>Breadcrumbs</li>
-      <li>Panels/Wells</li>
-      <li>Video</li>
-      <li>Icons</li>
-      <li>Widgets</li>
-  </ul>
-</sidebar>
+    </ul>
+
+    <div id="getting-started-designers">
+      <h3>Designers</h3>
+      <ul>
+        <li>Rem units with px fallback<br>
+          <p>@mixin font-size($sizevalue: 1.6){<br>
+            &nbsp;&nbsp;font-size: ($sizevalue * 10) + px;<br>
+            &nbsp;&nbsp;font-size: ($sizevalue + rem;<br>
+          }
+        </li>
+        <li>Set HTML to 10px to ensure 1rem = 1px</li>
+        <li>Use em for positioning</li>
+      </ul>
+    </div>
+
+    <div id="colors">
+      <h2>Colors</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="addl_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+  <script>
+    $('body').scrollspy({ target: '#nav' });
+
+    $('[data-spy="scroll"]').each(function () {
+      var $spy = $(this).scrollspy('refresh')
+    });
+  </script>
 </body>
 </html>

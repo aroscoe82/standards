@@ -1,0 +1,20 @@
+html { font-size: 10px; font-size: 1rem; }
+
+body { font-size: 14px; font-size: 1.4rem; position: relative; }
+
+a { color: #000; text-decoration: none; }
+a:hover { color: #48a9d3; }
+
+.sidebar { box-sizing: border-box; float: left; padding: 1rem; position: fixed; width: 100%; }
+@media (min-width: 768px) { .sidebar { width: 33.33%; } }
+
+.nav { padding-left: 0; }
+.nav li { list-style: none; }
+.nav li > ul { padding-left: 1rem; }
+.nav li a { border-left: 3px solid transparent; padding-left: .5rem; }
+.nav li.active > a { border-left: 3px solid #48a9d3; color: #48a9d3; }
+
+.page-content { box-sizing: border-box; margin-left: 33.33%; padding: 1rem; width: 100%; }
+@media (min-width: 768px) { .page-content { width: 66.67%; } }
+
+/*# sourceMappingURL=guide_styles.css.map */
