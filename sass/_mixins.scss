@@ -1,0 +1,9 @@
+@mixin font-size($sizevalue: 1.6, $basesize: 10) {
+  font-size: ($sizevalue * $basesize) + px;
+  font-size: $sizevalue + em;
+}
+
+@mixin font-size-em($sizevalue: 1, $base-font-size: 1.4, $base-size: 10) {
+  font-size: ($sizevalue * ($base-font-size * $base-size)) + px;
+  font-size: ($sizevalue) + em;
+}

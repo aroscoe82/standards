@@ -1,0 +1,23 @@
+$base-size: 10;
+$base-font-size: 1.4;
+
+// Colors
+$black: #000;
+$white: #fff;
+
+$brand-primary: #00468c;
+$brand-secondary: #72b8ff;
+
+$gray-dark: lighten($black, 20%);
+$gray-medium: lighten($black, 50%);
+$gray-light: lighten($black, 80%);
+
+$success: #45b649;
+$warning: #edce1f;
+$danger: #db0c0c;
+
+// Link Colors
+$link-decoration: none;
+$link-color: #48a9d3;
+$link-color-visited: darken($link-color, 20%);
+

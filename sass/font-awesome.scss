@@ -1,0 +1,20 @@
+/*!
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+$fa-font-path:        '//netdna.bootstrapcdn.com/font-awesome/4.5.0/fonts'; // for referencing Bootstrap CDN font files directly
+$fa-css-prefix:       cux;
+
+@import '../addl_components/font-awesome/scss/variables';
+@import '../addl_components/font-awesome/scss/mixins';
+@import '../addl_components/font-awesome/scss/path';
+@import '../addl_components/font-awesome/scss/core';
+@import '../addl_components/font-awesome/scss/larger';
+@import '../addl_components/font-awesome/scss/fixed-width';
+@import '../addl_components/font-awesome/scss/list';
+@import '../addl_components/font-awesome/scss/bordered-pulled';
+@import '../addl_components/font-awesome/scss/animated';
+@import '../addl_components/font-awesome/scss/rotated-flipped';
+@import '../addl_components/font-awesome/scss/stacked';
+@import '../addl_components/font-awesome/scss/icons';

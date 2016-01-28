@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>Standards</title>
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
   <link rel="stylesheet" type="text/css" href="css/guide_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 </head>
 <body data-spy="scroll" data-target="#nav">
   <div class="sidebar">
@@ -12,26 +14,26 @@
           <a href="#getting-started">Getting Started</a>
           <ul>
             <li><a href="#getting-started-developers">Developers</a></li>
-            <li><a href="#getting-started-designers">Designers</a></li>
+            <!-- <li><a href="#getting-started-designers">Designers</a></li> -->
           </ul>
         </li>
-        <li>
-          <a href="#colors">Colors</a>
+        <li><a href="#colors">Colors</a>
           <ul>
-            <li>Pallets</li>
-            <li>Text Accessibility</li>
+            <li><a href="#colors-pallet">Pallet</a></li>
+            <!-- <li>Text Accessibility</li> -->
           </ul>
         </li>
-        <li>Typography
+        <li><a href="#typography">Typography</a>
           <ul>
-            <li>Typefaces</li>
-            <li>Type Setting</li>
+            <li><a href="#">Typefaces</a></li>
+            <li><a href="#">Icon Font</a></li>
+            <!-- <li>Type Setting</li>
             <li>Links</li>
             <li>Lists</li>
-            <li>Alignment</li>
+            <li>Alignment</li> -->
           </ul>
         </li>
-        <li>Grid System</li>
+        <!-- <li>Grid System</li>
         <li>Buttons
           <ul>
             <li>Sizes</li>
@@ -70,7 +72,7 @@
         <li>Panels/Wells</li>
         <li>Video</li>
         <li>Icons</li>
-        <li>Widgets</li>
+        <li>Widgets</li> -->
       </ul>
     </div>
   </div>
@@ -85,7 +87,20 @@
       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
     <div id="getting-started-developers">
-      <h3>Developers</h3>
+      <h2 class="section-heading">Developers</h2>
+
+      <h3 class="section-heading">CSS Architecture</h3>
+      <ol>
+        <li>The CSS foundation is build with a Sass preprocessor language.</li>
+        <li>Icon fonts are prefixed with .cux (.cux-check).</li>
+        <li>Uses modular CSS for scalable, modular, and flexible code.</li>
+        <li>Uses nesting when appropriate. Nest minimally with up to three levels of nesting.</li>
+        <li>Global variables are defined in the _variables.scss file. This is where custom theming can be done to change site-wide colors, fonts, etc.</li>
+        <li>Media queries are built mobile first.</li>
+        <li>Spacing units are as much as possible defined as rem or em units so they scale appropriately with text size. Pixels can be used for detail work and should not exceed 5px (For example: 3px borders).</li>
+      </ol>
+      <h3 class="section-heading">CSS Best Practices</h3>
+      <h4>Naming</h4>
       <ul>
         <li>Avoid Camelcase</li>
         <li>Write things semantically. Name it's function not its appearance.</li>
@@ -94,6 +109,9 @@
         <li>Name single noun</li>
         <li>Name modifiers and state-based with adjectives</li>
         <li>Consider name spacing everything</li>
+      </ul>
+      <h4>Coding</h4>
+      <ul>
         <li>Do not nest more than 3 levels deep</li>
         <li>Don't use IDs, IDs are reserved for JS</li>
         <li>BEM (Block, Element, Modifier)
@@ -102,34 +120,25 @@
             <li>.nav_bar-link-clicked</li>
           </ul>
         </li>
-      </ul>
-    </div>
-
-    <ul>
-      <li>Where possible limit files with to 80 characters<br>
-        <p>How to set sublime to 80 characters: "rulers": [80]</p>
-      </li>
-      <li>Soft tabs with 2 space indent</li>
-      <li>One space after :</li>
-      <li>Put space before {</li>
-      <li>Blank line between slector block</li>
-      <li>Multiple slectors shoud lbe on invididual line with no space after comma</li>
-      <li>Property value pairs indent one level</li>
-      <li>single quote urs and string values</li>
-      <li>Sorting (alphabetical order)
-        <ul>
-          <li>variables</li>
-          <li>extend directives</li>
-          <li>include directives</li>
-          <li>properties</li>
-        </ul>
-      </li>
-    </ul>
-
-    <div id="getting-started-designers">
-      <h3>Designers</h3>
-      <ul>
-        <li>Rem units with px fallback<br>
+        <li>Where possible limit files with to 80 characters<br>
+          <p>How to set sublime to 80 characters: "rulers": [80]</p>
+        </li>
+        <li>Soft tabs with 2 space indent</li>
+        <li>One space after :</li>
+        <li>Put space before {</li>
+        <li>Blank line between slector block</li>
+        <li>Multiple slectors should be on invididual line with no space after comma</li>
+        <li>Property value pairs indent one level</li>
+        <li>Single quote urs and string values</li>
+        <li>Sorting (alphabetical order)
+          <ul>
+            <li>variables</li>
+            <li>extend directives</li>
+            <li>include directives</li>
+            <li>properties</li>
+          </ul>
+        </li>
+        <li>Use rem units with px fallback<br>
           <p>@mixin font-size($sizevalue: 1.6){<br>
             &nbsp;&nbsp;font-size: ($sizevalue * 10) + px;<br>
             &nbsp;&nbsp;font-size: ($sizevalue + rem;<br>
@@ -138,18 +147,208 @@
         <li>Set HTML to 10px to ensure 1rem = 1px</li>
         <li>Use em for positioning</li>
       </ul>
+      <h3 class="section-heading">Where Things Are:</h3>
+      <ul>
+        <li>HTML markup is located _____</li>
+        <li>Sass styles are located in /sass. Compiled CSS is located in /css</li>
+        <li>JS is located in /js/src/. Compiled JS is located in /js/build/</li>
+        <li>If Fonts are local then are located in /fonts, otherwise loaded from ___</li>
+        <li>Images are located in /images</li>
+      </ul>
+      <h3>Browser Support</h3>
+      <p>The standards are designed to support both older and newer browsers through progressive enhancement, and officially support Internet Explorer 9 and up, and the latest versions of Chrome, Firefox, and Safari. Internet Explorer 8 and 9 uses polyfill.</p>
     </div>
 
+    <!-- <div id="getting-started-designers">
+      <h3>Designers</h3>
+      
+    </div> -->
+
     <div id="colors">
-      <h2>Colors</h2>
+      <h2 class="section-heading">Colors</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div id="colors-pallet">
+        <h3 class="section-heading">Pallet</h3>
+        <div class="pallet">
+          <ul class="unstyled">
+            <li class="pallet-swatch">
+              <span class="detail">Primary</span>
+              <span class="swatch color-bg-primary"></span>
+              <span class="detail">
+                #00468c<br>
+                rgb(0, 70, 140)<br>
+                .color-bg-primary
+              </span>
+            </li>
+            <li class="pallet-swatch">
+              <span class="detail">Secondary</span>
+              <span class="swatch color-bg-secondary"></span>
+              <span class="detail">
+                ##72b8ff<br>
+                rgb(114, 184, 255)<br>
+                .color-bg-secondary
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="pallet">
+          <ul class="unstyled">
+            <li class="pallet-swatch">
+              <span class="detail">Black</span>
+              <span class="swatch color-bg-black"></span>
+              <span class="detail">
+                #000000<br>
+                rgb(0, 0, 0)<br>
+                .color-bg-black
+              </span>
+            </li>
+            <li class="pallet-swatch">
+              <span class="detail">White</span>
+              <span class="swatch color-bg-white"></span>
+              <span class="detail">
+                #ffffff<br>
+                rgb(125, 125, 125)<br>
+                .color-bg-white
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="pallet">
+          <ul class="unstyled">
+            <li class="pallet-swatch">
+              <span class="detail">Dark Gray</span>
+              <span class="swatch color-bg-gray-dark"></span>
+              <span class="detail">
+                #333333<br>
+                rgb(51, 51, 51)<br>
+                .color-bg-gray-dark
+              </span>
+            </li>
+            <li class="pallet-swatch">
+              <span class="detail">Dark Gray</span>
+              <span class="swatch color-bg-gray-medium"></span>
+              <span class="detail">
+                #808080<br>
+                rgb(128, 128, 128)<br>
+                .color-bg-gray-medium
+              </span>
+            </li>
+            <li class="pallet-swatch">
+              <span class="detail">Light Gray</span>
+              <span class="swatch color-bg-gray-light"></span>
+              <span class="detail">
+                #cccccc<br>
+                rgb(204, 204, 204)<br>
+                .color-bg-gray-light
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="pallet">
+          <ul class="unstyled">
+            <li class="pallet-swatch">
+              <div class="detail">Success</div>
+              <span class="swatch color-bg-success"></span>
+              <div class="detail">
+                #45b649<br>
+                rgb(69, 182, 73)<br>
+                .color-bg-success
+              </div>
+            </li>
+            <li class="pallet-swatch">
+              <div class="detail">Warning</div>
+              <span class="swatch color-bg-warning"></span>
+              <div class="detail">
+                #edce1f<br>
+                rgb(237, 206, 31)<br>
+                .color-bg-warning
+              </div>
+            </li>
+            <li class="pallet-swatch">
+              <div class="detail">Danger</div>
+              <span class="swatch color-bg-danger"></span>
+              <div class="detail">
+                #db0c0c<br>
+                rgb(219, 12, 12)<br>
+                .color-bg-danger
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
+
+    <div id="typography">
+      <h2 class="section-heading">Typography</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div id="typogrpahy-typefaces">
+        <h3 class="section-heading">Fonts</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div id="typogrpahy-sizing">
+          <h3 class="section-heading">Headings</h3>
+          <h1>Heading Level 1</h1>
+          <h2>Heading Level 2</h2>
+          <h3>Heading Level 3</h3>  
+          <h4>Heading Level 4</h4>
+          <h5>Heading Level 5</h5> 
+          <h6>Heading Level 6</h6>
+          <p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div id="typography-links">
+          <h3 class="section-heading">Links</h3>
+          <p><a href="#">This is a link without surrounding text.</a></p>
+          <p class="color-bg-gray-light"><a href="#">This</a> is a text link on a light background.</p>
+          <p><a class="" href="#">This</a> is a visited link.</p>
+          <p>This is a link which opens in a <a href="http://www.google.com" target="_blank">new tab</a>.</p>
+          <div class="">
+            <p><a href="#">This</a> is a text link on a dark background.</p>
+          </div>
+        </div>
+
+        <div id="typogrpahy-icons">
+          <h3 class="section-heading">Icon Font</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+        <div id="buttons">
+          <h2 class="section-heading">Buttons</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div> <!-- End Page Content -->
 
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script src="addl_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>

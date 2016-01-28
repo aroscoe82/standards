@@ -1,0 +1,48 @@
+.color-bg-primary { background-color: #00468c; }
+
+.color-bg-secondary { background-color: #72b8ff; }
+
+.color-bg-black { background-color: #000; }
+
+.color-bg-white { background-color: #fff; }
+
+.color-bg-gray-dark { background-color: #333333; }
+
+.color-bg-gray-medium { background-color: gray; }
+
+.color-bg-gray-light { background-color: #cccccc; }
+
+.color-bg-success { background-color: #45b649; }
+
+.color-bg-warning { background-color: #edce1f; }
+
+.color-bg-danger { background-color: #db0c0c; }
+
+html { font-size: 10px; font-size: 1em; }
+
+body { font-size: 14px; font-size: 1.4em; position: relative; }
+
+h1, h2, h3, h4, h5, h6 { font-stretch: normal; font-style: normal; font-weight: normal; line-height: 1.125em; margin: .675em 0 0; }
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child { margin-top: 0; }
+
+h1 { font-size: 28px; font-size: 2em; }
+
+h2 { font-size: 19.684px; font-size: 1.406em; }
+
+h3 { font-size: 16.38px; font-size: 1.17em; }
+
+h4 { font-size: 14px; font-size: 1em; }
+
+h5 { font-size: 11.62px; font-size: 0.83em; }
+
+h6 { font-size: 9.38px; font-size: 0.67em; }
+
+p { font-size: 14px; font-size: 1em; margin: 1em 0 0; }
+p:last-child { margin-bottom: 1em; }
+
+a { text-decoration: none; }
+a:visited, a:hover, a:active { color: #237092; }
+
+ul.unstyled { list-style: none; padding-left: 0; }
+
+/*# sourceMappingURL=dashboard.css.map */

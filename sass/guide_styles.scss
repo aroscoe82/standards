@@ -1,32 +1,9 @@
 $mobile-break: 768px;
-$link-color: #48a9d3;
-$black: #000;
+
+@import 'variables', 'mixins', 'colors';
 
 @mixin bp($break-point: 1200px) {
   @media (min-width: $break-point) { @content; };
-}
-
-@mixin font-size($sizevalue: 1.6) {
-  font-size: ($sizevalue * 10) + px;
-  font-size: $sizevalue + rem;
-}
-
-html {
-  @include font-size(1);
-}
-
-body {
-  @include font-size(1.4);
-  position: relative;
-}
-
-a {
-  color: $black;
-  text-decoration: none;
-
-  &:hover {
-    color: $link-color;
-  }
 }
 
 .sidebar {
@@ -46,6 +23,7 @@ a {
 
   li {
     list-style: none;
+    padding-left: .5rem;
 
     > ul {
       padding-left: 1rem;
@@ -70,3 +48,38 @@ a {
     width: 66.67%;
   }
 }
+
+.pallet {
+
+  .pallet-swatch {
+    display: inline-block;
+
+    + .pallet-swatch {
+      margin-left: 1rem;
+    }
+
+    .swatch {
+      border-radius: .25rem;
+      box-shadow: .125em .125em .5em rgba(0, 0, 0, .25);
+      display: block;
+      height: (50 / $base-size) + rem;
+      margin: .5rem 0;
+      width: (150 / $base-size) + rem;
+    }
+  }
+}
+
+.section-heading {
+  font-weight: bold;
+  padding-bottom: .25em;
+}
+
+h2.section-heading {
+  border-bottom: 4px solid $gray-dark;
+  margin-top: 2em;
+}
+
+h3.section-heading {
+  border-bottom: 1px solid $gray-light;
+}
+
