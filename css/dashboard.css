@@ -71,7 +71,8 @@ h6 { font-size: 12.75px; font-size: 1.275rem; font-weight: 300; }
 
 p { margin: 1em 0 0; }
 p:last-child { margin-bottom: 1em; }
-p.lead { font-size: 19.125px; font-size: 1.125em; }
+
+.lead { font-size: 19.125px; font-size: 1.125em; }
 
 a { color: #2d6a88; text-decoration: underline; }
 a:visited, a:focus, a:active { color: #2d6a88; }

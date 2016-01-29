@@ -35,10 +35,10 @@ p {
   &:last-child {
     margin-bottom: 1em;
   }
+}
 
-  &.lead{
-    @include font-size-em(1.125, $base-font-size, $base-size);
-  }
+.lead {
+  @include font-size-em(1.125, $base-font-size, $base-size);
 }
 
 a {

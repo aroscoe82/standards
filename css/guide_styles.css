@@ -78,4 +78,8 @@ h3.section-heading { border-bottom: 1px solid #cccccc; margin-top: 2rem; }
 
 .example-type-sizing h1, .example-type-sizing h2, .example-type-sizing h3, .example-type-sizing h4, .example-type-sizing h5, .example-type-sizing h6 { margin: 0; }
 
+.code { background-color: #ffdbdb; border-radius: 4px; color: #bc0003; font-size: 90%; padding: 0 .5rem; }
+
+pre { background-color: #fff; border: 1px solid #cccccc; border-radius: 4px; color: #0d0d0d; display: block; font-size: 13px; line-height: 1.42857143; margin: 0 0 10px; padding: 9.5px; word-break: break-all; word-wrap: break-word; }
+
 /*# sourceMappingURL=guide_styles.css.map */
