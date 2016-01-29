@@ -1,39 +1,83 @@
+body {
+  background-color: $body-bg;
+}
+
 .color-bg-primary {
+  @include link-styles($brand-primary, $link-color-default, $link-color-invert);
+
   background-color: $brand-primary;
+  // color: pick-visible-color($brand-primary, $black, $white);
+  color: color-contrast($brand-primary, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-secondary {
+  @include link-styles($brand-secondary, $link-color-default, $link-color-invert);
+
   background-color: $brand-secondary;
+  //color: pick-visible-color($brand-secondary, $black, $white);
+  color: color-contrast($brand-secondary, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-black {
+  @include link-styles($black, $link-color-default, $link-color-invert);
+
   background-color: $black;
+  // color: pick-visible-color($black, $black, $white);
+  color: color-contrast($black, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-white {
+  @include link-styles($white, $link-color-invert, $link-color-default);
+
   background-color: $white;
+  // color: pick-visible-color($white, $black, $white);
+  color: color-contrast($white, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-gray-dark {
+  @include link-styles($gray-dark, $link-color-default, $link-color-invert);
+
   background-color: $gray-dark;
+  // color: pick-visible-color($gray-dark, $black, $white);
+  color: color-contrast($gray-dark, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-gray-medium {
+  @include link-styles($gray-medium, $link-color-default, $link-color-invert);
+  // problem
   background-color: $gray-medium;
+  //color: pick-visible-color($gray-medium, $black, $white);
+  color: color-contrast($gray-medium, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-gray-light {
+  @include link-styles($gray-light, $link-color-default, $link-color-invert);
+  // problem
+
   background-color: $gray-light;
+  // color: pick-visible-color($gray-light, $black, $white);
+  color: color-contrast($gray-light, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-success {
+  @include link-styles($success, $link-color-default, $link-color-invert);
+
   background-color: $success;
+  // color: pick-visible-color($success, $black, $white);
+  color: color-contrast($success, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-warning {
+  @include link-styles($warning, $link-color-default, $link-color-invert);
   background-color: $warning;
+  // color: pick-visible-color($warning, $black, $white);
+  color: color-contrast($warning, $contrasted-dark-default, $contrasted-light-default);
 }
 
 .color-bg-danger {
+  @include link-styles($danger, $link-color-default, $link-color-invert);
+
   background-color: $danger;
+  // color: pick-visible-color($danger, $black, $white);
+  color: color-contrast($danger, $contrasted-dark-default, $contrasted-light-default);
 }

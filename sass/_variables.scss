@@ -1,23 +1,39 @@
 $base-size: 10;
-$base-font-size: 1.4;
+$base-font-size: 1.7;
 
 // Colors
 $black: #000;
+$contrasted-dark-default: #000;
 $white: #fff;
+$contrasted-light-default: #fff;
 
 $brand-primary: #00468c;
 $brand-secondary: #72b8ff;
 
-$gray-dark: lighten($black, 20%);
-$gray-medium: lighten($black, 50%);
+$gray-dark: lighten($black, 30%);
+$gray-medium: lighten($black, 47%);
 $gray-light: lighten($black, 80%);
 
-$success: #45b649;
-$warning: #edce1f;
-$danger: #db0c0c;
+$success: #45b649; // bring green
+$warning: #edce1f; // mid yellow
+$danger: #bd0909; // dark red
+
+
+$body-bg: #f2eeee;
+$font-color-default: $black;
+$font-color-invert: $white;
 
 // Link Colors
-$link-decoration: none;
-$link-color: #48a9d3;
-$link-color-visited: darken($link-color, 20%);
+$link-decoration: underline;
 
+$link-color-default: #2d6a88;
+$link-color-default-alt: #55bae7;
+
+$link-color-invert: #fff;
+$link-color-invert-alt: #55bae7;
+
+// Button
+$btn-radius: .25em;
+$btn-hover-change: -15%;
+
+$btn-font-color: $white; // null to use scale-color

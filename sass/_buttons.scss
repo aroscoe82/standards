@@ -1,0 +1,157 @@
+.btn {
+  @include font-size-em(1, $base-font-size, $base-size);
+  -webkit-appearance: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1em;
+  outline: none;
+  padding: .25em .5em;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:active,
+  &:visited,
+  &:focus,
+  &:hover {
+    -webkit-appearance: none;
+    outline: none;
+  }
+}
+
+.btn-default {
+  background-color: $body-bg;
+  border: 1px solid $font-color-default;
+  color: color-contrast($body-bg, $font-color-default, $font-color-invert);
+
+  &:hover {
+    background-color: scale-color($body-bg, $lightness: $btn-hover-change);
+  }
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+  @if $btn-font-color{
+    color: $btn-font-color;
+  }@else{
+    color: color-contrast($brand-primary, $font-color-default, $font-color-invert);
+  }
+
+  &:hover {
+    $hovercolor: scale-color($brand-primary, $lightness: $btn-hover-change);
+    background-color: $hovercolor;
+    @if $btn-font-color{
+      color: $btn-font-color;
+    }@else{
+      color: color-contrast($hovercolor, $font-color-default, $font-color-invert);
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: $brand-secondary;
+  @if $btn-font-color{
+    color: $btn-font-color;
+  }@else{
+    color: color-contrast($brand-secondary, $font-color-default, $font-color-invert);
+  }
+
+  &:hover {
+    // background-color: scale-color($brand-secondary, $lightness: $btn-hover-change);
+    $hovercolor: scale-color($brand-secondary, $lightness: $btn-hover-change);
+    background-color: $hovercolor;
+    @if $btn-font-color{
+      color: $btn-font-color;
+    }@else{
+      color: color-contrast($hovercolor, $font-color-default, $font-color-invert);
+    }
+  }
+}
+
+.btn-success {
+  background-color: $success;
+  @if $btn-font-color{
+    color: $btn-font-color;
+  }@else{
+    color: color-contrast($success, $font-color-default, $font-color-invert);
+  }
+
+  &:hover {
+    // background-color: scale-color($success, $lightness: $btn-hover-change);
+    $hovercolor: scale-color($success, $lightness: $btn-hover-change);
+    background-color: $hovercolor;
+    @if $btn-font-color{
+      color: $btn-font-color;
+    }@else{
+      color: color-contrast($hovercolor, $font-color-default, $font-color-invert);
+    }
+  }
+}
+
+.btn-warning {
+  background-color: $warning;
+  @if $btn-font-color{
+    color: $btn-font-color;
+  }@else{
+    color: color-contrast($warning, $font-color-default, $font-color-invert);
+  }
+
+  &:hover {
+    // background-color: scale-color($warning, $lightness: $btn-hover-change);
+    $hovercolor: scale-color($warning, $lightness: $btn-hover-change);
+    background-color: $hovercolor;
+    @if $btn-font-color{
+      color: $btn-font-color;
+    }@else{
+      color: color-contrast($hovercolor, $font-color-default, $font-color-invert);
+    }
+  }
+}
+
+.btn-danger {
+  background-color: $danger;
+  @if $btn-font-color{
+    color: $btn-font-color;
+  }@else{
+    color: color-contrast($danger, $font-color-default, $font-color-invert);
+  }
+
+  &:hover {
+    // background-color: scale-color($danger, $lightness: $btn-hover-change);
+    $hovercolor: scale-color($danger, $lightness: $btn-hover-change);
+    background-color: $hovercolor;
+    @if $btn-font-color{
+      color: $btn-font-color;
+    }@else{
+      color: color-contrast($hovercolor, $font-color-default, $font-color-invert);
+    }
+  }
+}
+
+.btn-link {
+  background-color: inherit;
+  color: color-contrast($body-bg, $font-color-default, $font-color-invert);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Size
+.btn-lg {
+  @include font-size-em(1.4, $base-font-size, $base-size);
+}
+
+.btn-sm {
+  @include font-size-em(.825, $base-font-size, $base-size);
+}
+
+.btn-xs {
+  @include font-size-em(.625, $base-font-size, $base-size);
+}

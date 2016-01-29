@@ -2,6 +2,9 @@ $mobile-break: 768px;
 
 @import 'variables', 'mixins', 'colors';
 
+$link-color-default: #5496f2;
+$link-color-default-alt: #000;
+
 @mixin bp($break-point: 1200px) {
   @media (min-width: $break-point) { @content; };
 }
@@ -32,8 +35,21 @@ $mobile-break: 768px;
     a { border-left: 3px solid transparent; padding-left: .5rem; }
 
     &.active > a {
-      border-left: 3px solid $link-color;
-      color: $link-color;
+      border-left: 3px solid $link-color-default-alt;
+      color: $link-color-default-alt;
+    }
+  }
+
+  a{
+    color: $link-color-default;
+    text-decoration: none;
+
+    &:visited, &:focus, &:active {
+      color: $link-color-default;
+    }
+
+    &:hover {
+      color: $link-color-default-alt;
     }
   }
 }
@@ -60,7 +76,7 @@ $mobile-break: 768px;
 
     .swatch {
       border-radius: .25rem;
-      box-shadow: .125em .125em .5em rgba(0, 0, 0, .25);
+      box-shadow: .125rem .125rem .5rem rgba(0, 0, 0, .25);
       display: block;
       height: (50 / $base-size) + rem;
       margin: .5rem 0;
@@ -71,15 +87,20 @@ $mobile-break: 768px;
 
 .section-heading {
   font-weight: bold;
-  padding-bottom: .25em;
+  padding-bottom: .25rem;
 }
 
 h2.section-heading {
   border-bottom: 4px solid $gray-dark;
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 h3.section-heading {
   border-bottom: 1px solid $gray-light;
+  margin-top: 2rem;
+}
+
+.example-type-sizing{
+  h1, h2, h3, h4, h5, h6 { margin: 0; }
 }
 

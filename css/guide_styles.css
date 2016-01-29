@@ -1,22 +1,55 @@
-.color-bg-primary { background-color: #00468c; }
+/* Calculates the sRGB luma of a colour.  Math nicked from a great Thoughtbot article by Reda Lemeden: http://robots.thoughtbot.com/closer-look-color-lightness */
+body { background-color: #f2eeee; }
 
-.color-bg-secondary { background-color: #72b8ff; }
+.color-bg-primary { background-color: #00468c; color: #fff; }
+.color-bg-primary a { color: #fff; text-decoration: underline; }
+.color-bg-primary a:visited, .color-bg-primary a:focus, .color-bg-primary a:active { color: #fff; }
+.color-bg-primary a:hover { color: #55bae7; }
 
-.color-bg-black { background-color: #000; }
+.color-bg-secondary { background-color: #72b8ff; color: #000; }
+.color-bg-secondary a { color: #fff; text-decoration: underline; }
+.color-bg-secondary a:visited, .color-bg-secondary a:focus, .color-bg-secondary a:active { color: #fff; }
+.color-bg-secondary a:hover { color: #55bae7; }
 
-.color-bg-white { background-color: #fff; }
+.color-bg-black { background-color: #000; color: #fff; }
+.color-bg-black a { color: #fff; text-decoration: underline; }
+.color-bg-black a:visited, .color-bg-black a:focus, .color-bg-black a:active { color: #fff; }
+.color-bg-black a:hover { color: #55bae7; }
 
-.color-bg-gray-dark { background-color: #333333; }
+.color-bg-white { background-color: #fff; color: #000; }
+.color-bg-white a { color: #2d6a88; text-decoration: underline; }
+.color-bg-white a:visited, .color-bg-white a:focus, .color-bg-white a:active { color: #2d6a88; }
+.color-bg-white a:hover { color: #55bae7; }
 
-.color-bg-gray-medium { background-color: gray; }
+.color-bg-gray-dark { background-color: #4d4d4d; color: #fff; }
+.color-bg-gray-dark a { color: #fff; text-decoration: underline; }
+.color-bg-gray-dark a:visited, .color-bg-gray-dark a:focus, .color-bg-gray-dark a:active { color: #fff; }
+.color-bg-gray-dark a:hover { color: #55bae7; }
 
-.color-bg-gray-light { background-color: #cccccc; }
+.color-bg-gray-medium { background-color: #787878; color: #fff; }
+.color-bg-gray-medium a { color: #fff; text-decoration: underline; }
+.color-bg-gray-medium a:visited, .color-bg-gray-medium a:focus, .color-bg-gray-medium a:active { color: #fff; }
+.color-bg-gray-medium a:hover { color: #55bae7; }
 
-.color-bg-success { background-color: #45b649; }
+.color-bg-gray-light { background-color: #cccccc; color: #000; }
+.color-bg-gray-light a { color: #2d6a88; text-decoration: underline; }
+.color-bg-gray-light a:visited, .color-bg-gray-light a:focus, .color-bg-gray-light a:active { color: #2d6a88; }
+.color-bg-gray-light a:hover { color: #55bae7; }
 
-.color-bg-warning { background-color: #edce1f; }
+.color-bg-success { background-color: #45b649; color: #000; }
+.color-bg-success a { color: #fff; text-decoration: underline; }
+.color-bg-success a:visited, .color-bg-success a:focus, .color-bg-success a:active { color: #fff; }
+.color-bg-success a:hover { color: #55bae7; }
 
-.color-bg-danger { background-color: #db0c0c; }
+.color-bg-warning { background-color: #edce1f; color: #000; }
+.color-bg-warning a { color: #2d6a88; text-decoration: underline; }
+.color-bg-warning a:visited, .color-bg-warning a:focus, .color-bg-warning a:active { color: #2d6a88; }
+.color-bg-warning a:hover { color: #55bae7; }
+
+.color-bg-danger { background-color: #bd0909; color: #fff; }
+.color-bg-danger a { color: #fff; text-decoration: underline; }
+.color-bg-danger a:visited, .color-bg-danger a:focus, .color-bg-danger a:active { color: #fff; }
+.color-bg-danger a:hover { color: #55bae7; }
 
 .sidebar { box-sizing: border-box; float: left; padding: 1rem; position: fixed; width: 100%; }
 @media (min-width: 768px) { .sidebar { width: 33.33%; } }
@@ -25,19 +58,24 @@
 .nav li { list-style: none; padding-left: .5rem; }
 .nav li > ul { padding-left: 1rem; }
 .nav li a { border-left: 3px solid transparent; padding-left: .5rem; }
-.nav li.active > a { border-left: 3px solid #48a9d3; color: #48a9d3; }
+.nav li.active > a { border-left: 3px solid #000; color: #000; }
+.nav a { color: #5496f2; text-decoration: none; }
+.nav a:visited, .nav a:focus, .nav a:active { color: #5496f2; }
+.nav a:hover { color: #000; }
 
 .page-content { box-sizing: border-box; margin-left: 33.33%; padding: 1rem; width: 100%; }
 @media (min-width: 768px) { .page-content { width: 66.67%; } }
 
 .pallet .pallet-swatch { display: inline-block; }
 .pallet .pallet-swatch + .pallet-swatch { margin-left: 1rem; }
-.pallet .pallet-swatch .swatch { border-radius: .25rem; box-shadow: 0.125em 0.125em 0.5em rgba(0, 0, 0, 0.25); display: block; height: 5rem; margin: .5rem 0; width: 15rem; }
+.pallet .pallet-swatch .swatch { border-radius: .25rem; box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.25); display: block; height: 5rem; margin: .5rem 0; width: 15rem; }
 
-.section-heading { font-weight: bold; padding-bottom: .25em; }
+.section-heading { font-weight: bold; padding-bottom: .25rem; }
 
-h2.section-heading { border-bottom: 4px solid #333333; margin-top: 2em; }
+h2.section-heading { border-bottom: 4px solid #4d4d4d; margin-top: 2rem; }
 
-h3.section-heading { border-bottom: 1px solid #cccccc; }
+h3.section-heading { border-bottom: 1px solid #cccccc; margin-top: 2rem; }
+
+.example-type-sizing h1, .example-type-sizing h2, .example-type-sizing h3, .example-type-sizing h4, .example-type-sizing h5, .example-type-sizing h6 { margin: 0; }
 
 /*# sourceMappingURL=guide_styles.css.map */

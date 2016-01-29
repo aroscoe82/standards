@@ -1,9 +1,79 @@
+@import 'luma';
+
 @mixin font-size($sizevalue: 1.6, $basesize: 10) {
   font-size: ($sizevalue * $basesize) + px;
-  font-size: $sizevalue + em;
+  font-size: $sizevalue + rem;
 }
 
 @mixin font-size-em($sizevalue: 1, $base-font-size: 1.4, $base-size: 10) {
   font-size: ($sizevalue * ($base-font-size * $base-size)) + px;
   font-size: ($sizevalue) + em;
+}
+
+@mixin contrasted($background-color, $dark: $contrasted-dark-default, $light: $contrasted-light-default, $threshold: null) {
+  @if $threshold {
+    // Deprecated in Compass 0.13
+    @warn "The $threshold argment to contrasted is no longer needed and will be removed in the next release.";
+  }
+  background-color: $background-color;
+  color: contrast-color($background-color, $dark, $light);
+}
+
+@mixin link-styles($basecolor, $link-dark, $link-light) {
+  a{
+   $selectedcolor: color-contrast($basecolor, $link-dark, $link-light);
+   color: $selectedcolor;
+    
+    @if($link-decoration != none){
+      text-decoration: $link-decoration;
+    }
+
+    &:visited, &:focus, &:active {
+      color: $selectedcolor;
+    }
+
+    &:hover {
+      @if $selectedcolor == $link-dark{
+        color: $link-color-default-alt;  
+      }@else{
+        color: $link-color-invert-alt 
+      }
+    }
+  }
+}
+
+// Calculeate brightness of a given color.
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+// Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+@function color-contrast($color, $dark: $contrasted-dark-default, $light: $contrasted-light-default) {
+  @if $color == null {
+    @return null;
+  }
+  @else {
+    $color-brightness: brightness($color);  
+    $light-text-brightness: brightness($light);
+    $dark-text-brightness: brightness($dark);
+    
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);  
+  }
+}
+
+
+
+@function pick-visible-color($bg, $c1, $c2) {
+  $bg-luma: luma($bg);
+  $c1-luma: luma($c1);
+  $c2-luma: luma($c2);
+
+  $c1-diff: abs($bg-luma - $c1-luma);
+  $c2-diff: abs($bg-luma - $c2-luma);
+
+  @if $c1-diff > $c2-diff {
+    @return $c1;
+  } @else {
+    @return $c2;
+  }
 }

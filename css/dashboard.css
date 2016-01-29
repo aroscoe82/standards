@@ -1,47 +1,111 @@
-.color-bg-primary { background-color: #00468c; }
+/* Calculates the sRGB luma of a colour.  Math nicked from a great Thoughtbot article by Reda Lemeden: http://robots.thoughtbot.com/closer-look-color-lightness */
+body { background-color: #f2eeee; }
 
-.color-bg-secondary { background-color: #72b8ff; }
+.color-bg-primary { background-color: #00468c; color: #fff; }
+.color-bg-primary a { color: #fff; text-decoration: underline; }
+.color-bg-primary a:visited, .color-bg-primary a:focus, .color-bg-primary a:active { color: #fff; }
+.color-bg-primary a:hover { color: #55bae7; }
 
-.color-bg-black { background-color: #000; }
+.color-bg-secondary { background-color: #72b8ff; color: #000; }
+.color-bg-secondary a { color: #fff; text-decoration: underline; }
+.color-bg-secondary a:visited, .color-bg-secondary a:focus, .color-bg-secondary a:active { color: #fff; }
+.color-bg-secondary a:hover { color: #55bae7; }
 
-.color-bg-white { background-color: #fff; }
+.color-bg-black { background-color: #000; color: #fff; }
+.color-bg-black a { color: #fff; text-decoration: underline; }
+.color-bg-black a:visited, .color-bg-black a:focus, .color-bg-black a:active { color: #fff; }
+.color-bg-black a:hover { color: #55bae7; }
 
-.color-bg-gray-dark { background-color: #333333; }
+.color-bg-white { background-color: #fff; color: #000; }
+.color-bg-white a { color: #2d6a88; text-decoration: underline; }
+.color-bg-white a:visited, .color-bg-white a:focus, .color-bg-white a:active { color: #2d6a88; }
+.color-bg-white a:hover { color: #55bae7; }
 
-.color-bg-gray-medium { background-color: gray; }
+.color-bg-gray-dark { background-color: #4d4d4d; color: #fff; }
+.color-bg-gray-dark a { color: #fff; text-decoration: underline; }
+.color-bg-gray-dark a:visited, .color-bg-gray-dark a:focus, .color-bg-gray-dark a:active { color: #fff; }
+.color-bg-gray-dark a:hover { color: #55bae7; }
 
-.color-bg-gray-light { background-color: #cccccc; }
+.color-bg-gray-medium { background-color: #787878; color: #fff; }
+.color-bg-gray-medium a { color: #fff; text-decoration: underline; }
+.color-bg-gray-medium a:visited, .color-bg-gray-medium a:focus, .color-bg-gray-medium a:active { color: #fff; }
+.color-bg-gray-medium a:hover { color: #55bae7; }
 
-.color-bg-success { background-color: #45b649; }
+.color-bg-gray-light { background-color: #cccccc; color: #000; }
+.color-bg-gray-light a { color: #2d6a88; text-decoration: underline; }
+.color-bg-gray-light a:visited, .color-bg-gray-light a:focus, .color-bg-gray-light a:active { color: #2d6a88; }
+.color-bg-gray-light a:hover { color: #55bae7; }
 
-.color-bg-warning { background-color: #edce1f; }
+.color-bg-success { background-color: #45b649; color: #000; }
+.color-bg-success a { color: #fff; text-decoration: underline; }
+.color-bg-success a:visited, .color-bg-success a:focus, .color-bg-success a:active { color: #fff; }
+.color-bg-success a:hover { color: #55bae7; }
 
-.color-bg-danger { background-color: #db0c0c; }
+.color-bg-warning { background-color: #edce1f; color: #000; }
+.color-bg-warning a { color: #2d6a88; text-decoration: underline; }
+.color-bg-warning a:visited, .color-bg-warning a:focus, .color-bg-warning a:active { color: #2d6a88; }
+.color-bg-warning a:hover { color: #55bae7; }
 
-html { font-size: 10px; font-size: 1em; }
+.color-bg-danger { background-color: #bd0909; color: #fff; }
+.color-bg-danger a { color: #fff; text-decoration: underline; }
+.color-bg-danger a:visited, .color-bg-danger a:focus, .color-bg-danger a:active { color: #fff; }
+.color-bg-danger a:hover { color: #55bae7; }
 
-body { font-size: 14px; font-size: 1.4em; position: relative; }
+html { font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif; font-size: 10px; }
 
-h1, h2, h3, h4, h5, h6 { font-stretch: normal; font-style: normal; font-weight: normal; line-height: 1.125em; margin: .675em 0 0; }
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child { margin-top: 0; }
+body { font-size: 17px; font-size: 1.7rem; position: relative; }
 
-h1 { font-size: 28px; font-size: 2em; }
+h1, h2, h3, h4, h5, h6 { font-stretch: normal; font-style: normal; font-weight: normal; line-height: 1.3; margin-bottom: .5em; margin-top: 1.5em; }
 
-h2 { font-size: 19.684px; font-size: 1.406em; }
+h1 { font-size: 39.95px; font-size: 3.995rem; font-weight: 700; }
 
-h3 { font-size: 16.38px; font-size: 1.17em; }
+h2 { font-size: 29.75px; font-size: 2.975rem; font-weight: 700; }
 
-h4 { font-size: 14px; font-size: 1em; }
+h3 { font-size: 19.89px; font-size: 1.989rem; font-weight: 700; }
 
-h5 { font-size: 11.62px; font-size: 0.83em; }
+h4 { font-size: 17px; font-size: 1.7rem; font-weight: 700; }
 
-h6 { font-size: 9.38px; font-size: 0.67em; }
+h5 { font-size: 14.96px; font-size: 1.496rem; font-weight: 700; }
 
-p { font-size: 14px; font-size: 1em; margin: 1em 0 0; }
+h6 { font-size: 12.75px; font-size: 1.275rem; font-weight: 300; }
+
+p { margin: 1em 0 0; }
 p:last-child { margin-bottom: 1em; }
+p.lead { font-size: 19.125px; font-size: 1.125em; }
 
-a { text-decoration: none; }
-a:visited, a:hover, a:active { color: #237092; }
+a { color: #2d6a88; text-decoration: underline; }
+a:visited, a:focus, a:active { color: #2d6a88; }
+a:hover { color: #55bae7; }
+
+.btn { font-size: 17px; font-size: 1em; -webkit-appearance: none; background-image: none; border: 1px solid transparent; border-radius: 4px; cursor: pointer; display: inline-block; line-height: 1em; outline: none; padding: .25em .5em; text-align: center; touch-action: manipulation; user-select: none; vertical-align: middle; white-space: nowrap; }
+.btn:active, .btn:visited, .btn:focus, .btn:hover { -webkit-appearance: none; outline: none; }
+
+.btn-default { background-color: #f2eeee; border: 1px solid #000; color: #000; }
+.btn-default:hover { background-color: #d3c5c5; }
+
+.btn-primary { background-color: #00468c; color: #fff; }
+.btn-primary:hover { background-color: #003c77; color: #fff; }
+
+.btn-secondary { background-color: #72b8ff; color: #fff; }
+.btn-secondary:hover { background-color: #3b9cff; color: #fff; }
+
+.btn-success { background-color: #45b649; color: #fff; }
+.btn-success:hover { background-color: #3b9b3e; color: #fff; }
+
+.btn-warning { background-color: #edce1f; color: #fff; }
+.btn-warning:hover { background-color: #d3b611; color: #fff; }
+
+.btn-danger { background-color: #bd0909; color: #fff; }
+.btn-danger:hover { background-color: #a10808; color: #fff; }
+
+.btn-link { background-color: inherit; color: #000; text-decoration: none; }
+.btn-link:hover { text-decoration: underline; }
+
+.btn-lg { font-size: 23.8px; font-size: 1.4em; }
+
+.btn-sm { font-size: 14.025px; font-size: 0.825em; }
+
+.btn-xs { font-size: 10.625px; font-size: 0.625em; }
 
 ul.unstyled { list-style: none; padding-left: 0; }
 
