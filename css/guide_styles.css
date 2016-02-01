@@ -63,7 +63,7 @@ body { background-color: #f2eeee; }
 .nav a:visited, .nav a:focus, .nav a:active { color: #5496f2; }
 .nav a:hover { color: #000; }
 
-.page-content { box-sizing: border-box; margin-left: 33.33%; padding: 1rem; width: 100%; }
+.page-content { box-sizing: border-box; margin-left: 33.33%; padding: 1rem 1rem 20rem; width: 100%; }
 @media (min-width: 768px) { .page-content { width: 66.67%; } }
 
 .pallet .pallet-swatch { display: inline-block; }
