@@ -1,0 +1,26 @@
+// siteheader
+.dashboard-header {
+  @include clx;
+  background: $gray-light;
+
+  @include bp(phony) {
+    padding: .5em 5.3125%;
+  }
+
+  @include bp(tablish) {
+    padding: .5em 1.4285714%;
+  }
+
+  @include bp(screeny) {
+    padding: 1em 2%;
+  }
+
+  .brand {
+    background: url('../images/icon-cua.png') 0 .5em no-repeat;
+    background-size: 1.5em;
+    float: left;
+    font-size: 1.25em;
+    padding: .5em 0 .5em 2em;
+    width: 65.8823529%;
+  }
+}

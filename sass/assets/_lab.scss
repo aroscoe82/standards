@@ -1,0 +1,65 @@
+// Labs
+
+.labs {
+    @include clx;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.labs-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @include bp(phony) {
+        width: 2em;
+        height: 2em;
+    }
+    @include bp(tablish) {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
+
+.labs-disclaimer {
+    float: right;
+    max-height: 0;
+    color: $white;
+    background: $gray-medium;
+    background: rgba($gray-dark,.85);
+    overflow: hidden;
+
+     -webkit-transition: all 0.5s linear;  
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+
+    @include bp(phony) {
+        width: 100%;
+    }
+
+    @include bp(tablish) {
+        width: 65.8823529%;
+    }
+
+    &.active {
+        max-height: 55em;
+    }
+
+    a {
+        color: $white;
+        font-weight: bold;
+    }
+
+}
+
+.disclaimer {
+    @include bp(phony) {
+        padding: 1em 3em 1em 1em;
+    }
+    @include bp(tablish) {
+        padding: 1em 3em 2em 1em;
+    }
+}

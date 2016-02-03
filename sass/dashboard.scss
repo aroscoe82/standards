@@ -1,6 +1,147 @@
-@import 'variables', 'mixins', 'colors', 'type', 'buttons';
+@import '../addl_components/normalize-scss/normalize', 'variables', 'mixins', 'colors', 'framework', 'type', 'buttons', 'images', 'assets/footer', 'assets/header', 'assets/lab', 'assets/nav', 'well_panel', 'tablesaw';
+
+html,
+body {
+  background-color: $gray-medium;
+  color: $font-color-default;
+  margin: 0;
+}
 
 ul {
   &.unstyled { list-style: none; padding-left: 0; }
 }
 
+h1.page-title:first-child {
+  border-bottom: .125em solid $gray-medium;
+  margin-top: 0;
+}
+
+h2.page-subtitle {
+  border-bottom: .125em solid $gray-light;
+  color: $gray-medium;
+  font-weight: 500;
+  margin: 1em 0 .5em;
+  padding-bottom: .25em;
+}
+
+.dashboard-content {
+  background-color: $white;
+
+  .content {
+    margin: auto;
+
+    @include bp(phony) {
+      margin: auto;
+      padding: 1em 5.3125%;
+    }
+
+    @include bp(tablish) {
+      padding: 1em 0;
+      width: 97.1428571%;
+    }
+
+    @include bp(tablish) {
+      max-width: 75em;
+      padding: 1em 0;
+      width: 96%;
+    }
+  }
+}
+
+.color-bg {
+  background-color: $gray-light;
+}
+
+[class^="stack"] {
+  box-sizing: border-box;
+  padding: 1rem 0;
+}
+
+.wells {
+  box-sizing: border-box;
+
+  .well {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    width: 24.5%;
+  }
+}
+
+.panels {
+  box-sizing: border-box;
+
+  .well {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 0 1rem;
+    width: 24.5%;
+  }
+}
+
+.health-bar {
+          width: 100%;
+          height: 20px;
+          background-color: #FFFF00;
+          position: relative;
+          /*border: 1px solid #ccc;*/
+          margin: 0 0 5px 0;
+
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e92213+0,ffff00+50,3adf00+100 */
+            background: #e92213; /* Old browsers */
+            background: -moz-linear-gradient(left, #e92213 0%, #ffff00 50%, #3adf00 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #e92213 0%,#ffff00 50%,#3adf00 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #e92213 0%,#ffff00 50%,#3adf00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e92213', endColorstr='#3adf00',GradientType=1 ); /* IE6-9 */
+
+        }
+        .health-critical-bar {
+          width: 28%;
+          height: 100%;
+          position: relative;
+          float: left;
+          background-color: #e92213;
+        }
+        .health-good-bar {
+          width: 28%;
+          height: 100%;
+          position: relative;
+          float: right;
+          background-color: #3ADF00;
+        }
+
+        .vertical-line {
+            border-left: 4px solid #000000;
+            position: absolute;
+            height: 100%;
+        }
+
+        .vertical-line i{
+            font-size: 30px;
+            line-height: 14px;
+            position: absolute;
+            top: -12px;
+            left: -11px;
+        }
+        
+        .chart-color1 { fill: #e87352; } 
+        .chart-color2  { fill: #eb886c; }
+
+        .chart-color3 { fill: #f8e47a; }
+        .chart-color4 { fill: #f6df58; } 
+        .chart-color5 { fill: #f5d941; }
+
+        .chart-color6 { fill: #abd872; }
+        .chart-color7 { fill: #9cd159; }
+
+        .chart-gradient{
+          fill: #e92213; /* Old browsers */
+          fill: -moz-linear-gradient(left, #e92213 0%, #ffff00 50%, #3adf00 100%); /* FF3.6-15 */
+          fill: -webkit-linear-gradient(left, #e92213 0%,#ffff00 50%,#3adf00 100%); /* Chrome10-25,Safari5.1-6 */
+          fill: linear-gradient(to right, #e92213 0%,#ffff00 50%,#3adf00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+
+        .needle,
+        .needle-center {
+          fill: #464A4F;
+        }

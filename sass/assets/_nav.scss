@@ -1,0 +1,25 @@
+.nav-site{
+
+}
+
+.nav-controls{
+
+}
+
+.nav-control-mobile{
+  display: block;
+  text-align: right;
+  padding: .15em;
+  font-size: 2em;
+  line-height: 1;
+  color: $gray-medium;
+  text-decoration: none;
+
+  @include bp(custom, $mobile-nav){
+    display: none;
+  }
+}
+
+.nav-controls-right{
+  float: right;
+}

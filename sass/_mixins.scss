@@ -1,8 +1,7 @@
-@import 'luma';
 
 @mixin font-size($sizevalue: 1.6, $basesize: 10) {
   font-size: ($sizevalue * $basesize) + px;
-  font-size: $sizevalue + rem;
+  font-size: $sizevalue + em;
 }
 
 @mixin font-size-em($sizevalue: 1, $base-font-size: 1.4, $base-size: 10) {
@@ -20,27 +19,111 @@
 }
 
 @mixin link-styles($basecolor, $link-dark, $link-light) {
-  a{
-   $selectedcolor: color-contrast($basecolor, $link-dark, $link-light);
-   color: $selectedcolor;
-    
-    @if($link-decoration != none){
+  a {
+    $selectedcolor: color-contrast($basecolor, $link-dark, $link-light);
+    color: $selectedcolor;
+
+    @if ($link-decoration != none) {
       text-decoration: $link-decoration;
     }
 
-    &:visited, &:focus, &:active {
+    &:visited,
+    &:focus,
+    &:active {
       color: $selectedcolor;
     }
 
     &:hover {
       @if $selectedcolor == $link-dark{
-        color: $link-color-default-alt;  
+        color: $link-color-default-alt;
       }@else{
-        color: $link-color-invert-alt 
+        color: $link-color-invert-alt;
       }
     }
   }
 }
+
+// breakpoints
+@mixin bp($point, $break-point: 0) {
+  @if $point == hiscreeny {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 62.5em),
+    only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 62.5em),
+    only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 62.5em),
+    only screen and (min-device-pixel-ratio: 2) and (min-width: 62.5em),
+    only screen and (min-resolution: 192dpi) and (min-width: 62.5em),
+    only screen and (min-resolution: 2dppx) and (min-width: 62.5em)
+    { @content; };
+  }
+  @if $point == screeny {
+    @media (min-width: 62.5em) { @content; };
+  }@else if $point == tablish {
+    @media (min-width: 38.75em)  { @content; };
+  }@else if $point == phony {
+    @media (max-width: 38.7em)  { @content; };
+  }@else if $point == tinyphony {
+    @media (max-width: 25em)  { @content; };
+  }@else if ($point == custom) {
+    @media (min-width: $break-point) { @content; };
+  }
+}
+
+// vertical center
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+
+// transitions
+@mixin transit($what,$speed,$how) {
+  -webkit-transition: $what $speed $how;
+  -moz-transition: $what $speed $how;
+  -ms-transition: $what $speed $how;
+  -o-transition: $what $speed $how;
+  transition: $what $speed $how;
+}
+// translate
+@mixin moveit($move-x,$move-y) {
+  -webkit-transform: translate($move-x, $move-y);
+  -moz-transform: translate($move-x, $move-y);
+  -ms-transform: translate($move-x, $move-y);
+  -o-transform: translate($move-x, $move-y);
+  transform: translate($move-x, $move-y);
+}
+
+@mixin clx {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin clr {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+// scale
+@mixin pump($pumped) {
+  -webkit-transform: scale($pumped);
+  -moz-transform: scale($pumped);
+  -o-transform: scale($pumped);
+  transform: scale($pumped);
+}
+
 
 // Calculeate brightness of a given color.
 @function brightness($color) {
@@ -51,13 +134,12 @@
 @function color-contrast($color, $dark: $contrasted-dark-default, $light: $contrasted-light-default) {
   @if $color == null {
     @return null;
-  }
-  @else {
-    $color-brightness: brightness($color);  
+  }@else {
+    $color-brightness: brightness($color);
     $light-text-brightness: brightness($light);
     $dark-text-brightness: brightness($dark);
-    
-    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);  
+
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
   }
 }
 

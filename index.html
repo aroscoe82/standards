@@ -12,10 +12,6 @@
       <ul class="nav">
         <li>
           <a href="#getting-started">Getting Started</a>
-          <ul>
-            <li><a href="#getting-started-developers">Developers</a></li>
-            <!-- <li><a href="#getting-started-designers">Designers</a></li> -->
-          </ul>
         </li>
         <li><a href="#colors">Colors</a>
           <ul>
@@ -41,6 +37,14 @@
             <!-- <li>Active States</li>
             <li>Hover States</li>
             <li>Disable States</li> -->
+          </ul>
+        </li>
+         <li><a href="#framework">Framework</a>
+        </li>
+        <li><a href="#wells_panels">Wells & Panels</a>
+          <ul>
+            <li><a href="#wells">Wells</a></li>
+            <li><a href="#panels">Panels</a></li>
           </ul>
         </li>
         <!--<li>Images
@@ -83,84 +87,9 @@
       <p><em>"A style guide is a set of standards for the writing and design of documents, either for general use or for a specific publication, organization or field. Its purpose to provide uniformity in style and formatting within a document and across multiple documents."</em> - <a href="http://apus.libguides.com/writing/thesiscapstone/styleguideFAQ" target="_blank">Library American Public University System</a></p>
 
       <p class="lead">The following is are Web Design Standards that are intended to set a new bar for simplicity and consistency throughout a project, while providing you with plug-and-play design and code.</p>
-    </div>
-    <div id="getting-started-developers">
-      <h2 class="section-heading">Developers</h2>
 
-      <h3 class="section-heading">CSS Architecture</h3>
-      <ol>
-        <li>The CSS foundation is build with a Sass preprocessor language.</li>
-        <li>Icon fonts are prefixed with .cux (.cux-check).</li>
-        <li>Uses modular CSS for scalable, modular, and flexible code.</li>
-        <li>Uses nesting when appropriate. Nest minimally with up to three levels of nesting.</li>
-        <li>Global variables are defined in the _variables.scss file. This is where custom theming can be done to change site-wide colors, fonts, etc.</li>
-        <li>Media queries are built mobile first.</li>
-        <li>Spacing units are as much as possible defined as rem or em units so they scale appropriately with text size. Pixels can be used for detail work and should not exceed 5px (For example: 3px borders).</li>
-      </ol>
-      <h3 class="section-heading">CSS Best Practices</h3>
-      <h4>Naming</h4>
-      <ul>
-        <li>Avoid Camelcase</li>
-        <li>Write things semantically. Name it's function not its appearance.</li>
-        <li>Avoid presentation -or- location specific names</li>
-        <li>Avoid naming based on content</li>
-        <li>Name single noun</li>
-        <li>Name modifiers and state-based with adjectives</li>
-        <li>Consider name spacing everything</li>
-      </ul>
-      <h4>Coding</h4>
-      <ul>
-        <li>Do not nest more than 3 levels deep</li>
-        <li>Don't use IDs, IDs are reserved for JS</li>
-        <li>BEM (Block, Element, Modifier)
-          <ul>
-            <li>.accordion-item-selected</li>
-            <li>.nav_bar-link-clicked</li>
-          </ul>
-        </li>
-        <li>Where possible limit files with to 80 characters<br>
-          <p>How to set sublime to 80 characters: "rulers": [80]</p>
-        </li>
-        <li>Soft tabs with 2 space indent</li>
-        <li>One space after :</li>
-        <li>Put space before {</li>
-        <li>Blank line between slector block</li>
-        <li>Multiple slectors should be on invididual line with no space after comma</li>
-        <li>Property value pairs indent one level</li>
-        <li>Single quote urs and string values</li>
-        <li>Sorting (alphabetical order)
-          <ul>
-            <li>variables</li>
-            <li>extend directives</li>
-            <li>include directives</li>
-            <li>properties</li>
-          </ul>
-        </li>
-        <li>Use rem units with px fallback<br>
-          <p>@mixin font-size($sizevalue: 1.6){<br>
-            &nbsp;&nbsp;font-size: ($sizevalue * 10) + px;<br>
-            &nbsp;&nbsp;font-size: ($sizevalue + rem;<br>
-          }
-        </li>
-        <li>Set HTML to 10px to ensure 1rem = 1px</li>
-        <li>Use em for positioning</li>
-      </ul>
-      <h3 class="section-heading">Where Things Are:</h3>
-      <ul>
-        <li>HTML markup is located _____</li>
-        <li>Sass styles are located in /sass. Compiled CSS is located in /css</li>
-        <li>JS is located in /js/src/. Compiled JS is located in /js/build/</li>
-        <li>If Fonts are local then are located in /fonts, otherwise loaded from ___</li>
-        <li>Images are located in /images</li>
-      </ul>
-      <h3>Browser Support</h3>
-      <p>The standards are designed to support both older and newer browsers through progressive enhancement, and officially support Internet Explorer 9 and up, and the latest versions of Chrome, Firefox, and Safari. Internet Explorer 8 and 9 uses polyfill.</p>
+      <h3><a href="developers.html">Developers Notes <i class="cux cux-arrow-right"></i></a></h3>
     </div>
-
-    <!-- <div id="getting-started-designers">
-      <h3>Designers</h3>
-      
-    </div> -->
 
     <div id="colors">
       <h2 class="section-heading">Colors</h2>
@@ -418,6 +347,110 @@
             </p>
           </div>
         </div>
+
+        <div id="framework">
+          <h2 class="section-heading">Grid Framework</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <div class="row row-padded">
+            <div class="stack-1 color-bg text-center">
+              <p>Stack 1</p>
+            </div>
+            <div class="stack-1 color-bg text-center">
+              <p>Stack 1</p>
+            </div>
+            <div class="stack-1 color-bg text-center">
+              <p>Stack 1</p>
+            </div>
+          </div>
+          <div class="row row-padded">
+            <div class="stack-2 color-bg text-center">
+              <p>Stack 2</p>
+            </div>
+            <div class="stack-1 color-bg text-center">
+              <p>Stack 1</p>
+            </div>
+          </div>
+          <div class="row row-padded">
+            <div class="stack-5050 color-bg text-center">
+              <p>Stack 5050</p>
+            </div>
+            <div class="stack-5050 color-bg text-center">
+              <p>Stack 5050</p>
+            </div>
+          </div>
+          <br>
+        </div>
+        
+        <div id="wells_panels">
+          <h2 class="section-heading">Wells & Panels</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div id="wells">
+            <h3 class="section-heading">Well Options</h3>
+            <div class="wells">
+              <div class="well primary text-center">
+                <div class="panel">
+                  <div class="panel-header">Well Primary</div>
+                  <div class="panel-body"></div>
+                </div>
+              </div>
+              <div class="well dark text-center">
+                <div class="panel">
+                   <div class="panel-header">Well Dark</div>
+                  <div class="panel-body"></div>
+                </div>
+              </div>
+              <div class="well medium text-center">
+                <div class="panel">
+                   <div class="panel-header">Well Medium</div>
+                  <div class="panel-body"></div>
+                </div>
+              </div>
+              <div class="well light text-center">
+                <div class="panel">
+                   <div class="panel-header">Well Light</div>
+                  <div class="panel-body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="panels">
+            <h3 class="section-heading">Panel Options</h3>
+            <div class="panels">
+              <div class="well light text-center">
+                <div class="panel">
+                  <div class="panel-header">Panel</div>
+                    <div class="panel-body"></div>
+                </div>
+              </div>
+              <div class="well light text-center">
+                <div class="panel info">
+                  <div class="panel-header">Panel Info</div>
+                    <div class="panel-body"></div>
+                </div>
+              </div>
+              <div class="well light text-center">
+                <div class="panel success">
+                  <div class="panel-header">Panel Success</div>
+                    <div class="panel-body"></div>
+                </div>
+              </div>
+              <div class="well light text-center">
+                <div class="panel caution">
+                  <div class="panel-header">Panel Caution</div>
+                    <div class="panel-body"></div>
+                </div>
+              </div>
+               <div class="well light text-center">
+                <div class="panel danger">
+                  <div class="panel-header">Panel Light</div>
+                    <div class="panel-body"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Wells_Panels -->
       </div> <!-- End Page Content -->
 
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -427,6 +460,21 @@
 
     $('[data-spy="scroll"]').each(function () {
       var $spy = $(this).scrollspy('refresh')
+    });
+
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
     });
   </script>
 </body>

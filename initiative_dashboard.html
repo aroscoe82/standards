@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Initiative - Dashboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script type="text/javascript" src="http://polyfill.herokuapp.com/core"></script>
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+  <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+      
+  <header class="dashboard-header">
+    <div class="brand">
+      <span>Dashboard</span>
+    </div>
+    <div class="site-nav">
+      <div class="nav-controls nav-controls-right">
+        <a class="nav-control-mobile menu-link" href="#menu">☰</a>
+      </div>       
+      <nav id="menu" class="menu">
+      </nav>
+    </div>
+  </header>
+        
+  <div class="dashboard-content">
+    <div class="content">
+      <h1 class="page-title">Amanda's World</h1>
+      <div class="well primary">
+          <div class="stack-1">
+              <div class="panel">
+                  <div class="panel-header">Number of Waves</div>
+                  <div class="panel-body">
+                      <div class="panel-feature">
+                          <p><i class="cux cux-map"></i> 1</p>
+                      </div>
+                  </div>
+              </div>
+          </div> <!-- /stack -->
+          <div class="stack-1">
+              <div class="panel">
+                  <div class="panel-header">Number of Participants</div>
+                  <div class="panel-body">
+                      <div class="panel-feature">
+                          <p><i class="cux cux-group"></i> 12</p>
+                      </div>
+                  </div>
+              </div>
+          </div> <!-- /stack -->
+          <div class="stack-1">
+              <div class="panel">
+                  <div class="panel-header">Completion</div>
+                  <div class="panel-body">
+                      <div class="panel-feature">
+                          <p><i class="cux cux-check"></i> 5%</p>
+                      </div>
+                  </div>
+              </div>
+          </div> <!-- /stack -->
+      </div>
+
+      <h2 class="page-subtitle">Initiative Health Check</h2>
+      <div class="well light text-center" id="initiative_health">
+        <div class="stack-1">
+          <div class="panel">
+            <div class="panel-header panel-header-link" onclick="goInitiativeHealthDetails('understand');">
+              Understanding
+              <div class="panel-btn"><i class="cux cux-arrow-circle-right cux-fw"></i><span>View</span></div>
+            </div>
+            <div class="panel-body">
+              <div class="panel-feature" id="initiative-understand">
+                <svg width="311" height="175.5"><g transform="translate(145.5, 145.5)"><path class="arc chart-color1" d="M-125.5,1.5369317329299283e-14A125.5,125.5 0 0,1 -113.0715929217536,-54.45240925925353L-77.03283820565683,-37.09705969455121A85.5,85.5 0 0,0 -85.5,1.047073013270987e-14Z"></path><path class="arc chart-color2" d="M-113.0715929217536,-54.45240925925353A125.5,125.5 0 0,1 -78.24797013327108,-98.11985104973773L-53.30837805892173,-66.84659175101653A85.5,85.5 0 0,0 -77.03283820565683,-37.09705969455121Z"></path><path class="arc chart-color3" d="M-78.24797013327117,-98.11985104973768A125.5,125.5 0 0,1 -27.92637721151759,-122.35345297881884L-19.02553985326497,-83.3563364915459A85.5,85.5 0 0,0 -53.30837805892179,-66.8465917510165Z"></path><path class="arc chart-color4" d="M-27.92637721151759,-122.35345297881884A125.5,125.5 0 0,1 27.926377211517323,-122.3534529788189L19.02553985326479,-83.35633649154593A85.5,85.5 0 0,0 -19.02553985326497,-83.3563364915459Z"></path><path class="arc chart-color5" d="M27.926377211517437,-122.35345297881886A125.5,125.5 0 0,1 78.24797013327104,-98.11985104973776L53.308378058921704,-66.84659175101656A85.5,85.5 0 0,0 19.025539853264867,-83.35633649154592Z"></path><path class="arc chart-color6" d="M78.24797013327095,-98.11985104973782A125.5,125.5 0 0,1 113.07159292175353,-54.45240925925367L77.03283820565679,-37.097059694551305A85.5,85.5 0 0,0 53.30837805892165,-66.8465917510166Z"></path><path class="arc chart-color7" d="M113.07159292175353,-54.45240925925367A125.5,125.5 0 0,1 125.5,-1.422050263309643e-13L85.5,-9.688071514978046e-14A85.5,85.5 0 0,0 77.03283820565679,-37.097059694551305Z"></path><circle class="needle-center" cx="0" cy="0" r="15"></circle><path class="needle" d="M -12.911130405059156 7.635621236255568 L -45.81372741753341 -77.46678243035493 L 12.911130405059156 -7.635621236255567"></path></g></svg>
+              </div>
+              <!-- <p class="health_details_wrapper"><button class="btn btn-default" onclick="goInitiativeHealthDetails('understand');">Details</button></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="stack-1">
+          <div class="panel">
+            <div class="panel-header panel-header-link" onclick="goInitiativeHealthDetails('believe');">
+              Belief
+              <div class="panel-btn"><i class="cux cux-arrow-circle-right cux-fw"></i><span>View</span></div>
+            </div>
+            <div class="panel-body">
+              <div class="panel-feature" id="initiative-understand">
+                <svg width="311" height="175.5"><g transform="translate(145.5, 145.5)"><path class="arc chart-color1" d="M-125.5,1.5369317329299283e-14A125.5,125.5 0 0,1 -113.0715929217536,-54.45240925925353L-77.03283820565683,-37.09705969455121A85.5,85.5 0 0,0 -85.5,1.047073013270987e-14Z"></path><path class="arc chart-color2" d="M-113.0715929217536,-54.45240925925353A125.5,125.5 0 0,1 -78.24797013327108,-98.11985104973773L-53.30837805892173,-66.84659175101653A85.5,85.5 0 0,0 -77.03283820565683,-37.09705969455121Z"></path><path class="arc chart-color3" d="M-78.24797013327117,-98.11985104973768A125.5,125.5 0 0,1 -27.92637721151759,-122.35345297881884L-19.02553985326497,-83.3563364915459A85.5,85.5 0 0,0 -53.30837805892179,-66.8465917510165Z"></path><path class="arc chart-color4" d="M-27.92637721151759,-122.35345297881884A125.5,125.5 0 0,1 27.926377211517323,-122.3534529788189L19.02553985326479,-83.35633649154593A85.5,85.5 0 0,0 -19.02553985326497,-83.3563364915459Z"></path><path class="arc chart-color5" d="M27.926377211517437,-122.35345297881886A125.5,125.5 0 0,1 78.24797013327104,-98.11985104973776L53.308378058921704,-66.84659175101656A85.5,85.5 0 0,0 19.025539853264867,-83.35633649154592Z"></path><path class="arc chart-color6" d="M78.24797013327095,-98.11985104973782A125.5,125.5 0 0,1 113.07159292175353,-54.45240925925367L77.03283820565679,-37.097059694551305A85.5,85.5 0 0,0 53.30837805892165,-66.8465917510166Z"></path><path class="arc chart-color7" d="M113.07159292175353,-54.45240925925367A125.5,125.5 0 0,1 125.5,-1.422050263309643e-13L85.5,-9.688071514978046e-14A85.5,85.5 0 0,0 77.03283820565679,-37.097059694551305Z"></path><circle class="needle-center" cx="0" cy="0" r="15"></circle><path class="needle" d="M -12.911130405059156 7.635621236255568 L -45.81372741753341 -77.46678243035493 L 12.911130405059156 -7.635621236255567"></path></g></svg>
+              </div>
+              <!-- <p class="health_details_wrapper"><button class="btn btn-default" onclick="goInitiativeHealthDetails('believe');">Details</button></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="stack-1">
+          <div class="panel">
+            <div class="panel-header panel-header-link" onclick="goInitiativeHealthDetails('commit');">
+              Commitment
+              <div class="panel-btn"><i class="cux cux-arrow-circle-right cux-fw"></i><span>View</span></div>
+            </div>
+            <div class="panel-body">
+              <div class="panel-feature" id="initiative-understand">
+                <svg width="311" height="175.5"><g transform="translate(145.5, 145.5)"><path class="arc chart-color1" d="M-125.5,1.5369317329299283e-14A125.5,125.5 0 0,1 -113.0715929217536,-54.45240925925353L-77.03283820565683,-37.09705969455121A85.5,85.5 0 0,0 -85.5,1.047073013270987e-14Z"></path><path class="arc chart-color2" d="M-113.0715929217536,-54.45240925925353A125.5,125.5 0 0,1 -78.24797013327108,-98.11985104973773L-53.30837805892173,-66.84659175101653A85.5,85.5 0 0,0 -77.03283820565683,-37.09705969455121Z"></path><path class="arc chart-color3" d="M-78.24797013327117,-98.11985104973768A125.5,125.5 0 0,1 -27.92637721151759,-122.35345297881884L-19.02553985326497,-83.3563364915459A85.5,85.5 0 0,0 -53.30837805892179,-66.8465917510165Z"></path><path class="arc chart-color4" d="M-27.92637721151759,-122.35345297881884A125.5,125.5 0 0,1 27.926377211517323,-122.3534529788189L19.02553985326479,-83.35633649154593A85.5,85.5 0 0,0 -19.02553985326497,-83.3563364915459Z"></path><path class="arc chart-color5" d="M27.926377211517437,-122.35345297881886A125.5,125.5 0 0,1 78.24797013327104,-98.11985104973776L53.308378058921704,-66.84659175101656A85.5,85.5 0 0,0 19.025539853264867,-83.35633649154592Z"></path><path class="arc chart-color6" d="M78.24797013327095,-98.11985104973782A125.5,125.5 0 0,1 113.07159292175353,-54.45240925925367L77.03283820565679,-37.097059694551305A85.5,85.5 0 0,0 53.30837805892165,-66.8465917510166Z"></path><path class="arc chart-color7" d="M113.07159292175353,-54.45240925925367A125.5,125.5 0 0,1 125.5,-1.422050263309643e-13L85.5,-9.688071514978046e-14A85.5,85.5 0 0,0 77.03283820565679,-37.097059694551305Z"></path><circle class="needle-center" cx="0" cy="0" r="15"></circle><path class="needle" d="M -12.911130405059156 7.635621236255568 L -45.81372741753341 -77.46678243035493 L 12.911130405059156 -7.635621236255567"></path></g></svg>
+              </div>
+              <!-- <p class="health_details_wrapper"><button class="btn btn-default" onclick="goInitiativeHealthDetails('commit');">Details</button></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="page-subtitle">Waves</h2>
+      <div class="well light"> <!-- Start Well -->
+        <div class="panel info"> <!-- Start Wave Detail Panel -->
+          <a href="/analytics/dashboard/initiative/wave/4151/">
+            <div class="panel-header panel-header-link header-large">
+                Wave 1 ( Aug. 18, 2014 - Sept. 5, 2014)
+                <div class="panel-btn"><i class="cux cux-arrow-circle-right cux-fw"></i><span>View</span></div>
+            </div>
+          </a>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="stack-3">
+                <div class="panel">
+                  <div class="panel-header">
+                    Overall Outlook                     
+                  </div>
+                
+                <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="panel-body">
+                  <div class="stack-5050">
+                    <div class="panel">
+                      <div class="panel-header">
+                        Number of Participants                    
+                      </div>
+                      <div class="panel-body">
+                        <div class="panel-feature">
+                        <p><i class="cux cux-group"></i> 12</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- /stack -->
+                  <div class="stack-5050">
+                    <div class="panel">
+                      <div class="panel-header">
+                        Completion                    
+                      </div>
+                      <div class="panel-body">
+                        <div class="panel-feature">
+                          <p>
+                            <i class="cux cux-check"></i> 5%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div> <!-- /stack -->
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Wave Detail Panel -->
+        <div class="panel caution"> <!-- Start Wave Detail Panel -->
+          <a href="/analytics/dashboard/initiative/wave/4151/">
+            <div class="panel-header panel-header-link header-large">
+                Wave 2 ( Sep. 18, 2014 - Sept. 25, 2014)
+                <div class="panel-btn"><i class="cux cux-arrow-circle-right cux-fw"></i><span>View</span></div>
+            </div>
+          </a>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="stack-3">
+                <div class="panel">
+                  <div class="panel-header">
+                    Overall Outlook                     
+                  </div>
+                
+                  <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <div class="panel-body">
+                    <div class="stack-5050">
+                      <div class="panel">
+                        <div class="panel-header">
+                          Number of Participants                    
+                        </div>
+                        <div class="panel-body">
+                          <div class="panel-feature">
+                          <p><i class="cux cux-group"></i> 24</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- /stack -->
+                    <div class="stack-5050">
+                      <div class="panel">
+                        <div class="panel-header">
+                          Completion                    
+                        </div>
+                        <div class="panel-body">
+                          <div class="panel-feature">
+                            <p>
+
+                              <i class="cux cux-check"></i>1%
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- /stack -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Wave Detail Panel -->
+        <div class="panel info"> <!-- Start Wave Detail Panel -->
+          <a href="/analytics/dashboard/initiative/wave/4151/">
+            <div class="panel-header panel-header-link header-large">
+                Wave 2 ( Sep. 25, 2014 - Oct. 3, 2014)
+                <div class="panel-btn"><i class="cux cux-arrow-circle-right cux-fw"></i><span>View</span></div>
+            </div>
+          </a>
+          <div class="panel">
+            <div class="panel-body">
+              <div class="stack-3">
+                <div class="panel">
+                  <div class="panel-header">
+                    Overall Outlook                     
+                  </div>
+                
+                  <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <div class="panel-body">
+                    <div class="stack-5050">
+                      <div class="panel">
+                        <div class="panel-header">
+                          Number of Participants                    
+                        </div>
+                        <div class="panel-body">
+                          <div class="panel-feature">
+                          <p><i class="cux cux-group"></i> 24</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- /stack -->
+                    <div class="stack-5050">
+                      <div class="panel">
+                        <div class="panel-header">
+                          Completion                    
+                        </div>
+                        <div class="panel-body">
+                          <div class="panel-feature">
+                            <p>
+
+                              <i class="cux cux-check"></i>10%
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- /stack -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End Wave Detail Panel -->
+      </div> <!-- End Well -->
+    </div>
+  </div>
+
+  <div class="dashboard-footer">
+      <section class="sitefooter">
+          <p><img src="https://devmedia.corpu.com/static/3.27-initiative_wave/analytics/dashboard/images/cu-analytics.png" alt="CorpU Analytics"></p>
+          <p>&copy; Copyright <script>document.write(new Date().getFullYear())</script></p>
+      </section>
+  </div>
+  <div class="labs">
+      <div id="labs-disclaimer" class="labs-disclaimer">
+          <div class="disclaimer">
+              <h3>CorpU Labs Program</h3>
+              <p>In our continuing effort to create better, more impactful solutions to your business challenges, CorpU is opening beta access to some of our new products.</p>
+              <p><strong>This software is a beta version.</strong> All content found on it are provided on an “as is” and “as available” basis. CorpU does not give any warranties, whether express or implied, as to the suitability or usability of the website, its software or any of its content.</p>
+              <p>Should you encounter any bugs, glitches, lack of functionality or other problems on the website, <a href="mailto:academysupport@corpu.com?subject=CorpU Labs Feedback">contact Academy Support</a>.</p>
+          </div>
+      </div>
+      <div class="labs-icon">
+          <a href="#labs-disclaimer" class="labs-link"><img src="https://devmedia.corpu.com/static/3.27-initiative_wave/analytics/dashboard/images/labs-icon.png" alt=""></a>
+      </div>
+  </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://devmedia.corpu.com/static/3.27-initiative_wave/analytics/dashboard/js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <script type="text/javascript">
+        $('#debug span').click(function() {
+            $('#debug_data').toggle();
+        });
+    </script>
+            
+    <script src="https://devmedia.corpu.com/static/3.27-initiative_wave/analytics/dashboard/js/tablesaw-0.1.7.min.js"></script>
+    <script src="https://devmedia.corpu.com/static/3.27-initiative_wave/analytics/dashboard/js/main.js"></script> 
+    <script type="text/javascript">
+        function goInitiativeHealthDetails(expectation){
+            var healthUrl = "/analytics/dashboard/initiative/1/health/changethis/";
+            healthUrl = healthUrl.replace("changethis", expectation);
+            window.location.href = healthUrl;
+        }
+    </script>  
+</body>
+</html>

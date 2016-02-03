@@ -1,0 +1,248 @@
+.well {
+  @include clx;
+  padding: 1em;
+
+  box-shadow: .125em .125em .5em rgba(17, 17, 17, .5);
+
+  &.primary {
+    background-color: $brand-primary;
+    border: .1rem solid darken($brand-primary, 10%);
+  }
+
+  &.dark {
+    background-color: $gray-dark;
+    border: .1rem solid darken($gray-dark, 10%);
+  }
+
+  &.medium {
+    background: $gray-medium;
+    border: .1em solid $gray-medium;
+    padding: 1em;
+  }
+
+  &.light {
+    background: $gray-light;
+    border: .1em solid $gray-light;
+    padding: 1em;
+  }
+}
+
+.panel {
+  background-color: $white;
+  border: .1rem solid darken($white, 10%);
+
+  .panel-header-link {
+    color: $panel-link-color-alt;
+    cursor: pointer;
+
+    &:hover {
+      color: $panel-link-color;
+    }
+  }
+
+  &.info {
+    background: $panel-info;
+    // border-color: $panel-info;
+    border: 0;
+
+    .panel-header-link {
+      background: $panel-info;
+      color: $panel-link-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $panel-link-color-alt;
+      }
+    }
+  }
+
+  &.success {
+    background: $panel-success;
+    // border-color: $panel-success;
+    border: 0;
+
+    .panel-header-link {
+      background: $panel-success;
+      color: $panel-link-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $panel-link-color-alt;
+      }
+    }
+  }
+
+  &.caution {
+    background: $panel-caution;
+    // border-color: $panel-caution;
+    border: 0;
+
+    .panel-header-link {
+      background: $panel-caution;
+      color: $panel-link-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $panel-link-color-alt;
+      }
+    }
+  }
+
+  &.danger {
+    background: $panel-danger;
+    // border-color: $panel-danger;
+    border: 0;
+
+    .panel-header-link {
+      background: $panel-danger;
+      color: $panel-link-color;
+      cursor: pointer;
+
+      &:hover {
+        color: $panel-link-color-alt;
+      }
+    }
+  }
+
+  +.panel {
+    @include bp(phony) {
+      margin: 1em 0 0;
+    }
+
+    @include bp(tablish) {
+      margin: 1em 0 0;
+    }
+  }
+}
+
+.panel-header {
+  background: rgba(17, 17, 17, .15);
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+
+  @media (max-width: 38.7em) {
+    padding: .5em .75em;
+  }
+
+  @media (min-width: 38.75em) {
+    padding: .75em 1em;
+  }
+
+  &.header-large {
+    font-size: 1.25em;
+  }
+}
+
+.panel-body {
+    background: $white; //rgba($white,.75);
+
+    @include bp(phony) {
+        padding: .875em .75em;
+    }
+
+    @include bp(tablish) {
+        @include clx;
+        padding: 1em 1em;
+    }
+
+    @include bp(tablish) {
+        @include clx;
+        padding: 1.125em 1em;
+    }
+}
+
+.panel-feature {
+    text-align: center;
+
+    p {
+        font-size: 3em;
+        font-weight: 600;
+        line-height: 1;        
+
+        @include bp(screeny) {
+            display: inline-block;
+        }
+    }
+    .labeled {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1;
+
+        @include bp(phony) {
+            margin-top: .5em;
+        }
+    }
+    .trend-up{
+        display: inline-block;
+        padding: .15em .5em .15em 1.75em;
+        background-color: #87de41;
+        background: rgba(190, 237, 152, 0.5) url('../images/arrow-up.png') 0.25em 50% no-repeat;
+        background-size: 1.125em;
+        border: 0.125em solid $panel-success;
+    }
+    .trend-down{
+        display: inline-block;
+        padding: .15em .5em .15em 1.75em;
+        background-color: #e67b6c;
+        background: rgba(226, 103, 86, 0.5) url('../images/arrow-down.png') 0.25em 50% no-repeat;
+        background-size: 1.25em;
+        border: 0.125em solid $panel-danger;
+    }
+
+}
+.panel-callout {
+    padding: 1em;
+    color: $white;
+    background: rgba($gray-dark,.85);
+    box-shadow: 0 .125em .25em $black;
+
+    @include bp(tablish) {
+        margin: 0 0 1em;
+    }
+}
+
+.panel-copy {
+    max-width: 45em;
+}
+.panel-copy+.panel-copy {
+    margin-top: 1em;
+}
+
+.panel-footer {
+    font-size: .825em;
+    text-align: right;
+    border-top: .075em solid rgba($black,.25);
+    
+    @include bp(phony) {
+        padding: .5em .75em;
+    }
+    @include bp(tablish) {
+        padding: .75em 1em;
+    }
+}
+
+.panel-btn {
+    position: absolute;
+    padding: 0 1em;
+    
+    @include bp(phony) {
+        top: .25em;
+        right: .25em;
+    }
+    @include bp(tablish) {
+        top: .625em;
+        right: .25em;
+    }
+    
+    a {
+        font-size: 1.5em;
+        line-height: 0;
+
+        
+    }
+    span {
+            display: none;
+        }
+}

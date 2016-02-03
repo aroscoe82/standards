@@ -40,11 +40,13 @@ $link-color-default-alt: #000;
     }
   }
 
-  a{
+  a {
     color: $link-color-default;
     text-decoration: none;
 
-    &:visited, &:focus, &:active {
+    &:visited,
+    &:focus,
+    &:active {
       color: $link-color-default;
     }
 
@@ -63,6 +65,12 @@ $link-color-default-alt: #000;
   @include bp($mobile-break) {
     width: 66.67%;
   }
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 72em;
+  padding: 1em 0;
 }
 
 .pallet {

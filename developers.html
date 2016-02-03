@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developers</title>
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+  <link rel="stylesheet" type="text/css" href="css/guide_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+</head>
+<body>
+  <div class="content">
+  <a href="/">Back to Guide</a>
+  </div>
+  <div id="getting-started-developers" class="content">
+    <h2 class="section-heading">Developers</h2>
+
+    <h3 class="section-heading">CSS Architecture</h3>
+    <ol>
+      <li>The CSS foundation is build with a Sass preprocessor language.</li>
+      <li>Icon fonts are prefixed with .cux (.cux-check).</li>
+      <li>Uses modular CSS for scalable, modular, and flexible code.</li>
+      <li>Uses nesting when appropriate. Nest minimally with up to three levels of nesting.</li>
+      <li>Global variables are defined in the _variables.scss file. This is where custom theming can be done to change site-wide colors, fonts, etc.</li>
+      <li>Media queries are built mobile first.</li>
+      <li>Spacing units are as much as possible defined as rem or em units so they scale appropriately with text size. Pixels can be used for detail work and should not exceed 5px (For example: 3px borders).</li>
+    </ol>
+    <h3 class="section-heading">CSS Best Practices</h3>
+    <h4>Naming</h4>
+    <ul>
+      <li>Avoid Camelcase</li>
+      <li>Write things semantically. Name it's function not its appearance.</li>
+      <li>Avoid presentation -or- location specific names</li>
+      <li>Avoid naming based on content</li>
+      <li>Name single noun</li>
+      <li>Name modifiers and state-based with adjectives</li>
+      <li>Consider name spacing everything</li>
+    </ul>
+    <h4>Coding</h4>
+    <ul>
+      <li>Do not nest more than 3 levels deep</li>
+      <li>Don't use IDs, IDs are reserved for JS</li>
+      <li>BEM (Block, Element, Modifier)
+        <ul>
+          <li>.accordion-item-selected</li>
+          <li>.nav_bar-link-clicked</li>
+        </ul>
+      </li>
+      <li>Where possible limit files with to 80 characters<br>
+        <p>How to set sublime to 80 characters: "rulers": [80]</p>
+      </li>
+      <li>Soft tabs with 2 space indent</li>
+      <li>One space after :</li>
+      <li>Put space before {</li>
+      <li>Blank line between slector block</li>
+      <li>Multiple slectors should be on invididual line with no space after comma</li>
+      <li>Property value pairs indent one level</li>
+      <li>Single quote urs and string values</li>
+      <li>Sorting (alphabetical order)
+        <ul>
+          <li>variables</li>
+          <li>extend directives</li>
+          <li>include directives</li>
+          <li>properties</li>
+        </ul>
+      </li>
+      <li>Use rem units with px fallback<br>
+        <p>@mixin font-size($sizevalue: 1.6){<br>
+          &nbsp;&nbsp;font-size: ($sizevalue * 10) + px;<br>
+          &nbsp;&nbsp;font-size: ($sizevalue + rem;<br>
+        }
+      </li>
+      <li>Set HTML to 10px to ensure 1rem = 1px</li>
+      <li>Use em for positioning</li>
+    </ul>
+    <h3 class="section-heading">Where Things Are:</h3>
+    <ul>
+      <li>HTML markup is located _____</li>
+      <li>Sass styles are located in /sass. Compiled CSS is located in /css</li>
+      <li>JS is located in /js/src/. Compiled JS is located in /js/build/</li>
+      <li>If Fonts are local then are located in /fonts, otherwise loaded from ___</li>
+      <li>Images are located in /images</li>
+    </ul>
+    <h3>Browser Support</h3>
+    <p>The standards are designed to support both older and newer browsers through progressive enhancement, and officially support Internet Explorer 9 and up, and the latest versions of Chrome, Firefox, and Safari. Internet Explorer 8 and 9 uses polyfill.</p>
+  </div>
+
+    <!-- <div id="getting-started-designers">
+      <h3>Designers</h3>
+      
+    </div> -->
+  </body>
+  </html>

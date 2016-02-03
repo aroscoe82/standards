@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       },
 
       sass: {
-        files: '<%= project.sassDir %>/*.scss',
+        files: '<%= project.sassDir %>/**/*.scss',
         tasks: ['sass', 'autoprefixer']
       },
 		}

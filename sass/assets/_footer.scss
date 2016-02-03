@@ -1,0 +1,21 @@
+// footer
+.sitefooter {
+  text-align: center;
+
+  @include bp(phony) {
+    margin: auto;
+    padding: 2em 0;
+    width: 65.034965%;
+  }
+
+  @include bp(tablish) {
+    margin: auto;
+    padding: 2em 0;
+    width: 31.7647059%;
+  }
+
+  @include bp(screeny) {
+    padding: 2em 0;
+    width: 20%;
+  }
+}

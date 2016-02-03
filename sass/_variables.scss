@@ -1,5 +1,8 @@
 $base-size: 10;
-$base-font-size: 1.7;
+$base-font-size: 1;
+
+// BreakPoints
+$mobile-nav: 62.5em;
 
 // Colors
 $black: #000;
@@ -7,24 +10,35 @@ $contrasted-dark-default: #000;
 $white: #fff;
 $contrasted-light-default: #fff;
 
-$brand-primary: #00468c;
-$brand-secondary: #72b8ff;
+$brand-primary: #357fb0;
+$brand-secondary: #115e99; //#00d8d2;
 
+$gray: #ccc;
 $gray-dark: lighten($black, 30%);
 $gray-medium: lighten($black, 47%);
 $gray-light: lighten($black, 80%);
 
-$success: #45b649; // bring green
-$warning: #edce1f; // mid yellow
-$danger: #bd0909; // dark red
-
+$success: #46b548; // bring green
+$warning: #ffca0a; // mid yellow
+$danger: #c13526; // dark red
 
 $body-bg: #f2eeee;
-$font-color-default: $black;
+$font-color-default: #444;
 $font-color-invert: $white;
 
+// Panels
+$panel-info: #115e99; //#00d8d2;
+$panel-success: $success;
+$panel-caution: $warning;
+$panel-danger: $danger;
+
+$panel-link-color: $white;
+$panel-link-color-alt: $black;
+
+
+
 // Link Colors
-$link-decoration: underline;
+$link-decoration: none;
 
 $link-color-default: #2d6a88;
 $link-color-default-alt: #55bae7;

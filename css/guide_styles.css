@@ -1,53 +1,52 @@
-/* Calculates the sRGB luma of a colour.  Math nicked from a great Thoughtbot article by Reda Lemeden: http://robots.thoughtbot.com/closer-look-color-lightness */
 body { background-color: #f2eeee; }
 
-.color-bg-primary { background-color: #00468c; color: #fff; }
-.color-bg-primary a { color: #fff; text-decoration: underline; }
+.color-bg-primary { background-color: #357fb0; color: #fff; }
+.color-bg-primary a { color: #fff; }
 .color-bg-primary a:visited, .color-bg-primary a:focus, .color-bg-primary a:active { color: #fff; }
 .color-bg-primary a:hover { color: #55bae7; }
 
-.color-bg-secondary { background-color: #72b8ff; color: #000; }
-.color-bg-secondary a { color: #fff; text-decoration: underline; }
+.color-bg-secondary { background-color: #115e99; color: #fff; }
+.color-bg-secondary a { color: #fff; }
 .color-bg-secondary a:visited, .color-bg-secondary a:focus, .color-bg-secondary a:active { color: #fff; }
 .color-bg-secondary a:hover { color: #55bae7; }
 
 .color-bg-black { background-color: #000; color: #fff; }
-.color-bg-black a { color: #fff; text-decoration: underline; }
+.color-bg-black a { color: #fff; }
 .color-bg-black a:visited, .color-bg-black a:focus, .color-bg-black a:active { color: #fff; }
 .color-bg-black a:hover { color: #55bae7; }
 
 .color-bg-white { background-color: #fff; color: #000; }
-.color-bg-white a { color: #2d6a88; text-decoration: underline; }
+.color-bg-white a { color: #2d6a88; }
 .color-bg-white a:visited, .color-bg-white a:focus, .color-bg-white a:active { color: #2d6a88; }
 .color-bg-white a:hover { color: #55bae7; }
 
 .color-bg-gray-dark { background-color: #4d4d4d; color: #fff; }
-.color-bg-gray-dark a { color: #fff; text-decoration: underline; }
+.color-bg-gray-dark a { color: #fff; }
 .color-bg-gray-dark a:visited, .color-bg-gray-dark a:focus, .color-bg-gray-dark a:active { color: #fff; }
 .color-bg-gray-dark a:hover { color: #55bae7; }
 
 .color-bg-gray-medium { background-color: #787878; color: #fff; }
-.color-bg-gray-medium a { color: #fff; text-decoration: underline; }
+.color-bg-gray-medium a { color: #fff; }
 .color-bg-gray-medium a:visited, .color-bg-gray-medium a:focus, .color-bg-gray-medium a:active { color: #fff; }
 .color-bg-gray-medium a:hover { color: #55bae7; }
 
 .color-bg-gray-light { background-color: #cccccc; color: #000; }
-.color-bg-gray-light a { color: #2d6a88; text-decoration: underline; }
+.color-bg-gray-light a { color: #2d6a88; }
 .color-bg-gray-light a:visited, .color-bg-gray-light a:focus, .color-bg-gray-light a:active { color: #2d6a88; }
 .color-bg-gray-light a:hover { color: #55bae7; }
 
-.color-bg-success { background-color: #45b649; color: #000; }
-.color-bg-success a { color: #fff; text-decoration: underline; }
+.color-bg-success { background-color: #46b548; color: #000; }
+.color-bg-success a { color: #fff; }
 .color-bg-success a:visited, .color-bg-success a:focus, .color-bg-success a:active { color: #fff; }
 .color-bg-success a:hover { color: #55bae7; }
 
-.color-bg-warning { background-color: #edce1f; color: #000; }
-.color-bg-warning a { color: #2d6a88; text-decoration: underline; }
+.color-bg-warning { background-color: #ffca0a; color: #000; }
+.color-bg-warning a { color: #2d6a88; }
 .color-bg-warning a:visited, .color-bg-warning a:focus, .color-bg-warning a:active { color: #2d6a88; }
 .color-bg-warning a:hover { color: #55bae7; }
 
-.color-bg-danger { background-color: #bd0909; color: #fff; }
-.color-bg-danger a { color: #fff; text-decoration: underline; }
+.color-bg-danger { background-color: #c13526; color: #fff; }
+.color-bg-danger a { color: #fff; }
 .color-bg-danger a:visited, .color-bg-danger a:focus, .color-bg-danger a:active { color: #fff; }
 .color-bg-danger a:hover { color: #55bae7; }
 
@@ -65,6 +64,8 @@ body { background-color: #f2eeee; }
 
 .page-content { box-sizing: border-box; margin-left: 33.33%; padding: 1rem 1rem 20rem; width: 100%; }
 @media (min-width: 768px) { .page-content { width: 66.67%; } }
+
+.content { margin: 0 auto; max-width: 72em; padding: 1em 0; }
 
 .pallet .pallet-swatch { display: inline-block; }
 .pallet .pallet-swatch + .pallet-swatch { margin-left: 1rem; }

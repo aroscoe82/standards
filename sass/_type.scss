@@ -30,15 +30,19 @@ h5 { @include font-size($sizevalue: (.88 * $base-font-size)); font-weight: 700; 
 h6 { @include font-size($sizevalue: (.75 * $base-font-size)); font-weight: 300; }
 
 p {
-  margin: 1em 0 0;
+  margin: 1em 0 0 0;
 
-  &:last-child {
-    margin-bottom: 1em;
+  &:first-child {
+    margin-top: 0;
   }
 }
 
 .lead {
   @include font-size-em(1.125, $base-font-size, $base-size);
+}
+
+.text-center {
+  text-align: center;
 }
 
 a {

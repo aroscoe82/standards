@@ -17,6 +17,8 @@
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.6",
-    "font-awesome": "fontawesome#^4.5.0"
+    "font-awesome": "fontawesome#^4.5.0",
+    "normalize-scss": "^3.0.3",
+    "filament-tablesaw": "tablesaw#^2.0.2"
   }
 }
