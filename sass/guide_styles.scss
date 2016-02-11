@@ -59,7 +59,7 @@ $link-color-default-alt: #000;
 .page-content {
   box-sizing: border-box;
   margin-left: 33.33%;
-  padding: 1rem 1rem 20rem;
+  padding: 1rem 10rem 20rem 1rem;
   width: 100%;
 
   @include bp($mobile-break) {
@@ -108,23 +108,28 @@ h3.section-heading {
   margin-top: 2rem;
 }
 
-.example-type-sizing{
-  h1, h2, h3, h4, h5, h6 { margin: 0; }
+.example-type-sizing {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 { margin: 0; }
 }
 
 .code {
-  background-color: lighten(#bc0003, 56%);
+  background-color: lighten($codecolor, 56%);
   border-radius: 4px;
-  color: #bc0003;
+  color: $codecolor;
   font-size: 90%;
   padding: 0 .5rem;
 }
 
 pre {
-  background-color: #fff;
-  border: 1px solid darken(#fff, 20%);
+  background-color: $white;
+  border: 1px solid darken($white, 20%);
   border-radius: 4px;
-  color: lighten(#000, 5%);
+  color: lighten($white, 5%);
   display: block;
   font-size: 13px;
   line-height: 1.42857143;

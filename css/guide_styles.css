@@ -30,7 +30,7 @@ body { background-color: #f2eeee; }
 .color-bg-gray-medium a:visited, .color-bg-gray-medium a:focus, .color-bg-gray-medium a:active { color: #fff; }
 .color-bg-gray-medium a:hover { color: #55bae7; }
 
-.color-bg-gray-light { background-color: #cccccc; color: #000; }
+.color-bg-gray-light { background-color: #e6e6e6; color: #000; }
 .color-bg-gray-light a { color: #2d6a88; }
 .color-bg-gray-light a:visited, .color-bg-gray-light a:focus, .color-bg-gray-light a:active { color: #2d6a88; }
 .color-bg-gray-light a:hover { color: #55bae7; }
@@ -62,7 +62,7 @@ body { background-color: #f2eeee; }
 .nav a:visited, .nav a:focus, .nav a:active { color: #5496f2; }
 .nav a:hover { color: #000; }
 
-.page-content { box-sizing: border-box; margin-left: 33.33%; padding: 1rem 1rem 20rem; width: 100%; }
+.page-content { box-sizing: border-box; margin-left: 33.33%; padding: 1rem 10rem 20rem 1rem; width: 100%; }
 @media (min-width: 768px) { .page-content { width: 66.67%; } }
 
 .content { margin: 0 auto; max-width: 72em; padding: 1em 0; }
@@ -75,12 +75,12 @@ body { background-color: #f2eeee; }
 
 h2.section-heading { border-bottom: 4px solid #4d4d4d; margin-top: 2rem; }
 
-h3.section-heading { border-bottom: 1px solid #cccccc; margin-top: 2rem; }
+h3.section-heading { border-bottom: 1px solid #e6e6e6; margin-top: 2rem; }
 
 .example-type-sizing h1, .example-type-sizing h2, .example-type-sizing h3, .example-type-sizing h4, .example-type-sizing h5, .example-type-sizing h6 { margin: 0; }
 
-.code { background-color: #ffdbdb; border-radius: 4px; color: #bc0003; font-size: 90%; padding: 0 .5rem; }
+.code { background-color: #fdf1f3; border-radius: 4px; color: #b7193d; font-size: 90%; padding: 0 .5rem; }
 
-pre { background-color: #fff; border: 1px solid #cccccc; border-radius: 4px; color: #0d0d0d; display: block; font-size: 13px; line-height: 1.42857143; margin: 0 0 10px; padding: 9.5px; word-break: break-all; word-wrap: break-word; }
+pre { background-color: #fff; border: 1px solid #cccccc; border-radius: 4px; color: white; display: block; font-size: 13px; line-height: 1.42857143; margin: 0 0 10px; padding: 9.5px; word-break: break-all; word-wrap: break-word; }
 
 /*# sourceMappingURL=guide_styles.css.map */
